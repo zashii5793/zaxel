@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZAXEL合同会社 | 経営課題を、技術と人で解決する</title>
+<meta name="description" content="ZAXEL合同会社は、経営コンサルティング・PM/BPR・アプリ開発を通じてクライアントの持続的成長を支援します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0c1a2e;
+    --navy-soft: #1a2e4a;
+    --orange: #c85a18;
+    --orange-light: #e06a28;
+    --white: #ffffff;
+    --off-white: #f8f7f5;
+    --silver: #d4d8dc;
+    --silver-light: #eceef0;
+    --mid-gray: #8a939e;
+    --text: #111827;
+    --text-sub: #4b5563;
+    --border: #dddbd8;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--white);
+    color: var(--text);
+    font-family: 'メイリオ', Meiryo, 'Hiragino Kaku Gothic ProN', sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 56px;
+    height: 64px;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* ── ZAXEL ロゴ：品格ある活字スタイル ── */
+  .nav-logo {
+    display: flex; align-items: center; gap: 14px;
+    text-decoration: none;
+  }
+  .logo-emblem {
+    width: 36px; height: 36px;
+    border: 1.5px solid var(--navy);
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+  }
+  .logo-emblem::before {
+    content: 'Z';
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--navy);
+    line-height: 1;
+  }
+  .logo-wordmark {
+    display: flex; flex-direction: column; gap: 1px;
+  }
+  .logo-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 0.28em;
+    color: var(--navy);
+    line-height: 1;
+  }
+  .logo-sub {
+    font-family: 'Space Mono', monospace;
+    font-size: 8px;
+    letter-spacing: 0.24em;
+    color: var(--mid-gray);
+    text-transform: uppercase;
+  }
+
+  .nav-links { display: flex; gap: 36px; list-style: none; }
+  .nav-links a {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-sub);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--navy); }
+  .nav-cta {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--white);
+    background: var(--navy);
+    padding: 10px 22px;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .nav-cta:hover { background: var(--orange); }
+
+  /* ─── HERO ─── */
+  .hero {
+    min-height: 100vh;
+    display: flex; align-items: center;
+    padding: 120px 56px 80px;
+    background: var(--off-white);
+    position: relative;
+    overflow: hidden;
+  }
+  /* 右側の幾何学的装飾 */
+  .hero-geo {
+    position: absolute;
+    right: 8%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 380px; height: 380px;
+  }
+  .geo-outer {
+    position: absolute; inset: 0;
+    border: 1px solid var(--silver);
+  }
+  .geo-inner {
+    position: absolute;
+    inset: 40px;
+    border: 1px solid var(--silver);
+    transform: rotate(12deg);
+  }
+  .geo-line-h {
+    position: absolute;
+    top: 50%; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--silver), transparent);
+  }
+  .geo-line-v {
+    position: absolute;
+    left: 50%; top: 0; bottom: 0;
+    width: 1px;
+    background: linear-gradient(180deg, transparent, var(--silver), transparent);
+  }
+  .geo-dot {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px; height: 6px;
+    background: var(--orange);
+  }
+
+  .hero-content { position: relative; z-index: 1; max-width: 640px; }
+  .hero-tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 28px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .hero-tag::before {
+    content: '';
+    display: block; width: 24px; height: 1px; background: var(--orange);
+  }
+
+  h1 {
+    font-family: 'メイリオ', Meiryo, sans-serif;
+    font-weight: 400;
+    font-size: clamp(36px, 4.5vw, 60px);
+    line-height: 1.55;
+    letter-spacing: 0.04em;
+    color: var(--navy);
+    margin-bottom: 28px;
+  }
+  h1 strong {
+    font-weight: 700;
+    position: relative;
+  }
+  h1 strong::after {
+    content: '';
+    position: absolute;
+    bottom: 2px; left: 0; right: 0;
+    height: 2px;
+    background: var(--orange);
+  }
+
+  .hero-sub {
+    font-size: 15px;
+    line-height: 2;
+    color: var(--text-sub);
+    max-width: 500px;
+    margin-bottom: 44px;
+  }
+  .hero-sub b { color: var(--navy); font-weight: 400; }
+
+  .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--navy);
+    color: var(--white);
+    padding: 14px 36px;
+    font-family: 'メイリオ', Meiryo, sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    transition: all 0.2s;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: var(--orange); }
+  .btn-secondary {
+    border: 1px solid var(--navy);
+    color: var(--navy);
+    padding: 14px 36px;
+    font-family: 'メイリオ', Meiryo, sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    transition: all 0.2s;
+    display: inline-block;
+  }
+  .btn-secondary:hover { background: var(--navy); color: var(--white); }
+
+  /* ─── 実績数値 ─── */
+  .hero-stats {
+    display: flex; gap: 0;
+    margin-top: 56px;
+    border-top: 1px solid var(--border);
+    border-left: 1px solid var(--border);
+  }
+  .stat-item {
+    flex: 1;
+    padding: 28px 28px 24px;
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    background: var(--white);
+  }
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 52px;
+    color: var(--navy);
+    line-height: 1;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .stat-unit {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    color: var(--orange);
+  }
+  .stat-label {
+    font-size: 12px;
+    color: var(--text-sub);
+    margin-top: 6px;
+    line-height: 1.6;
+  }
+
+  /* ─── SECTION COMMON ─── */
+  section { padding: 96px 56px; }
+  .section-tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 14px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .section-tag::before {
+    content: '';
+    display: block; width: 18px; height: 1px; background: var(--orange);
+  }
+  h2 {
+    font-family: 'メイリオ', Meiryo, sans-serif;
+    font-weight: 700;
+    font-size: clamp(24px, 3vw, 38px);
+    line-height: 1.4;
+    color: var(--navy);
+    margin-bottom: 14px;
+  }
+  .section-desc {
+    font-size: 14px;
+    line-height: 2;
+    color: var(--text-sub);
+    max-width: 520px;
+    margin-bottom: 52px;
+  }
+
+  /* ─── SERVICES ─── */
+  .services-wrap { max-width: 1100px; margin: 0 auto; }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--border);
+    border-left: 1px solid var(--border);
+  }
+  .service-card {
+    padding: 36px 30px;
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    background: var(--white);
+    transition: background 0.2s;
+    position: relative;
+  }
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--orange);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+  }
+  .service-card:hover { background: var(--off-white); }
+  .service-card:hover::before { transform: scaleX(1); }
+
+  .service-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    color: var(--silver);
+    margin-bottom: 20px;
+  }
+  .service-card h3 {
+    font-family: 'メイリオ', Meiryo, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 6px;
+    line-height: 1.5;
+  }
+  .service-card .en {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    color: var(--mid-gray);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .service-card p { font-size: 13px; color: var(--text-sub); line-height: 1.9; }
+  .service-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+  .tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.06em;
+    padding: 4px 8px;
+    border: 1px solid var(--border);
+    color: var(--mid-gray);
+  }
+
+  /* ─── RESULTS STRIP ─── */
+  .results-strip {
+    background: var(--navy);
+    padding: 0 56px;
+  }
+  .results-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    border-left: 1px solid rgba(255,255,255,0.08);
+  }
+  .result-item {
+    padding: 52px 40px;
+    border-right: 1px solid rgba(255,255,255,0.08);
+    text-align: left;
+  }
+  .result-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 72px;
+    color: var(--white);
+    display: block;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .result-unit {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    color: var(--orange);
+  }
+  .result-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+    margin-top: 12px;
+    margin-bottom: 6px;
+  }
+  .result-desc { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.7; }
+
+  /* ─── PORTFOLIO ─── */
+  .portfolio-wrap { max-width: 1100px; margin: 0 auto; }
+  .deck-grid {
+    border-top: 1px solid var(--border);
+    border-left: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+  }
+  .deck-item {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 22px 28px;
+    border-bottom: 1px solid var(--border);
+    background: var(--white);
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .deck-item:hover { background: var(--off-white); padding-left: 36px; }
+  .deck-left { display: flex; align-items: center; gap: 20px; }
+  .deck-cat {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    color: var(--orange);
+    width: 36px;
+    text-transform: uppercase;
+    flex-shrink: 0;
+  }
+  .deck-title { font-size: 14px; color: var(--text); }
+  .deck-arrow { color: var(--silver); font-size: 14px; transition: color 0.2s; }
+  .deck-item:hover .deck-arrow { color: var(--orange); }
+  .deck-all {
+    background: var(--off-white);
+    border-bottom: 2px solid var(--orange) !important;
+  }
+  .deck-all .deck-title { color: var(--navy); font-weight: 700; }
+
+  /* ─── ABOUT ─── */
+  .about-section {
+    background: var(--off-white);
+    border-top: 1px solid var(--border);
+  }
+  .about-wrap {
+    max-width: 1100px; margin: 0 auto;
+    display: grid; grid-template-columns: 5fr 4fr; gap: 80px; align-items: start;
+  }
+  .about-quote {
+    font-family: 'メイリオ', Meiryo, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--navy);
+    line-height: 1.8;
+    border-left: 2px solid var(--orange);
+    padding-left: 24px;
+    margin: 28px 0;
+  }
+
+  .skills-list { display: flex; flex-direction: column; gap: 20px; }
+  .skill-row { display: flex; flex-direction: column; gap: 8px; }
+  .skill-header { display: flex; justify-content: space-between; align-items: center; }
+  .skill-name { font-size: 13px; color: var(--text-sub); }
+  .skill-pct {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: var(--mid-gray);
+  }
+  .skill-bar { height: 2px; background: var(--border); }
+  .skill-fill { height: 100%; background: var(--navy); }
+
+  /* ─── CONTACT ─── */
+  .contact-section {
+    text-align: center;
+    padding: 100px 56px;
+    background: var(--white);
+  }
+  .contact-sub {
+    color: var(--text-sub);
+    margin-bottom: 44px;
+    font-size: 15px;
+    line-height: 2;
+  }
+  .contact-links { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+  .contact-link {
+    display: inline-block;
+    padding: 14px 32px;
+    border: 1px solid var(--border);
+    text-decoration: none;
+    color: var(--text-sub);
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    transition: all 0.2s;
+    background: var(--off-white);
+  }
+  .contact-link:hover { border-color: var(--navy); color: var(--navy); background: var(--white); }
+  .contact-note {
+    margin-top: 28px;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: var(--silver);
+    letter-spacing: 0.1em;
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 28px 56px;
+    display: flex; align-items: center; justify-content: space-between;
+    background: var(--white);
+  }
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 17px;
+    letter-spacing: 0.26em;
+    color: var(--navy);
+  }
+  footer p {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: var(--mid-gray);
+    letter-spacing: 0.1em;
+  }
+
+  /* ─── ANIMATIONS ─── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero-tag  { animation: fadeUp 0.5s ease 0.1s both; }
+  h1         { animation: fadeUp 0.5s ease 0.2s both; }
+  .hero-sub  { animation: fadeUp 0.5s ease 0.3s both; }
+  .hero-actions { animation: fadeUp 0.5s ease 0.4s both; }
+  .hero-stats { animation: fadeUp 0.5s ease 0.5s both; }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 768px) {
+    nav { padding: 0 20px; }
+    .nav-links { display: none; }
+    section, .contact-section { padding: 72px 24px; }
+    .hero { padding: 100px 24px 72px; }
+    .hero-geo { display: none; }
+    h1 { font-size: 32px; }
+    .hero-stats { flex-direction: column; border: none; gap: 0; }
+    .stat-item { border: 1px solid var(--border); margin-bottom: -1px; }
+    .services-grid { grid-template-columns: 1fr; }
+    .results-inner { grid-template-columns: 1fr; }
+    .about-wrap { grid-template-columns: 1fr; gap: 48px; }
+    footer { flex-direction: column; gap: 12px; text-align: center; padding: 24px; }
+    .results-strip { padding: 0 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="logo-emblem"></div>
+    <div class="logo-wordmark">
+      <div class="logo-name">ZAXEL</div>
+      <div class="logo-sub">合同会社</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#portfolio">Works</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">相談する</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-geo">
+    <div class="geo-outer"></div>
+    <div class="geo-inner"></div>
+    <div class="geo-line-h"></div>
+    <div class="geo-line-v"></div>
+    <div class="geo-dot"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-tag">ZAXEL合同会社</div>
+    <h1>経営課題を、<br><strong>技術</strong>と<strong>人</strong>で解決する。</h1>
+    <p class="hero-sub">
+      PM / BPRの専門知見と、AI活用の実装力を掛け合わせ、<br>
+      クライアントの「ありたい姿（To-Be）」への到達を<br>
+      <b>継続的なパートナー</b>として支援します。
+    </p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">相談する</a>
+      <a href="#portfolio" class="btn-secondary">実績を見る</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-num">15<span class="stat-unit">%</span></span>
+        <div class="stat-label">プロダクト開発<br>生産性向上</div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">20<span class="stat-unit">%</span></span>
+        <div class="stat-label">バグ修正時間<br>短縮</div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">80<span class="stat-unit">%</span></span>
+        <div class="stat-label">新開発手法<br>導入率達成</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="services-wrap">
+    <div class="section-tag">Services</div>
+    <h2>支援領域</h2>
+    <p class="section-desc">「点」のスポット支援から「線」の継続パートナーシップへ。感想ではなく定量成果にコミットします。</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <h3>経営課題・解決策提案</h3>
+        <div class="en">Strategy Consulting</div>
+        <p>現状（As-Is）の構造的分析から「ありたい姿（To-Be）」を設計。課題の核心に最短距離でリーチし、実行可能な解決策を提案します。</p>
+        <div class="service-tags">
+          <span class="tag">As-Is / To-Be</span>
+          <span class="tag">課題構造化</span>
+          <span class="tag">戦略立案</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <h3>プロジェクトマネジメント</h3>
+        <div class="en">Project Management</div>
+        <p>WBS・Exit条件・チケット管理を標準化し、手戻りゼロの推進体制を構築。QCD優先順位判断と期待値マネジメントで確実に成果へ導きます。</p>
+        <div class="service-tags">
+          <span class="tag">WBS</span>
+          <span class="tag">リスク管理</span>
+          <span class="tag">QCD管理</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">03</div>
+        <h3>組織設計</h3>
+        <div class="en">Organization Design</div>
+        <p>経営理念・行動指針・評価制度を連動させた「文化を作る組織」を設計。Will / Can / Mustの自律型メンバーが活躍できる仕組みを構築します。</p>
+        <div class="service-tags">
+          <span class="tag">評価制度</span>
+          <span class="tag">行動指針</span>
+          <span class="tag">自律型組織</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">04</div>
+        <h3>新人育成</h3>
+        <div class="en">Talent Development</div>
+        <p>「経営者視点」と「現場感覚」を両立する人材育成プログラムを提供。成果の出る型を最短距離で習得させ、即戦力化を実現します。</p>
+        <div class="service-tags">
+          <span class="tag">研修設計</span>
+          <span class="tag">OJT支援</span>
+          <span class="tag">PM基礎</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">05</div>
+        <h3>BPR（業務改善）</h3>
+        <div class="en">Business Process Reengineering</div>
+        <p>複雑な業務フローを構造的に分析し、標準化・仕組み化を実現。チャット依存・属人化から脱却し、ダッシュボード管理で可視化します。</p>
+        <div class="service-tags">
+          <span class="tag">業務標準化</span>
+          <span class="tag">フロー設計</span>
+          <span class="tag">仕組み化</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">06</div>
+        <h3>アプリ開発</h3>
+        <div class="en">App Development</div>
+        <p>Claude Code等AIネイティブ開発で工数を劇的に圧縮。「本当に必要な機能」からMVPで実装し、コンサルで得た業務知識を開発に直結させます。</p>
+        <div class="service-tags">
+          <span class="tag">Claude Code</span>
+          <span class="tag">MVP</span>
+          <span class="tag">AI Native</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS STRIP -->
+<div class="results-strip">
+  <div class="results-inner">
+    <div class="result-item">
+      <span class="result-num">15<span class="result-unit">%</span></span>
+      <div class="result-label">Productivity Up</div>
+      <div class="result-desc">プロダクト開発生産性向上</div>
+    </div>
+    <div class="result-item">
+      <span class="result-num">20<span class="result-unit">%</span></span>
+      <div class="result-label">Bug Fix Time Down</div>
+      <div class="result-desc">バグ修正時間の短縮</div>
+    </div>
+    <div class="result-item">
+      <span class="result-num">80<span class="result-unit">%</span></span>
+      <div class="result-label">Adoption Rate</div>
+      <div class="result-desc">新開発手法の導入率達成</div>
+    </div>
+  </div>
+</div>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <div class="portfolio-wrap">
+    <div class="section-tag">Works & Knowledge</div>
+    <h2>公開資料・実績</h2>
+    <p class="section-desc">PM・BPR・AI開発に関するナレッジをSpeaker Deckで公開しています。</p>
+    <div class="deck-grid">
+      <a href="https://speakerdeck.com/zashii/chu-xin-zhe-xiang-ke-claude-codedehe-gadekirunoka" target="_blank" class="deck-item">
+        <div class="deck-left">
+          <div class="deck-cat">AI</div>
+          <div class="deck-title">【初心者向け】Claude Codeで何ができるのか</div>
+        </div>
+        <div class="deck-arrow">→</div>
+      </a>
+      <a href="https://speakerdeck.com/zashii/claude-codewoshi-tutakai-fa-gaido-chu-xin-zhe-xiang-ke" target="_blank" class="deck-item">
+        <div class="deck-left">
+          <div class="deck-cat">DEV</div>
+          <div class="deck-title">Claude Codeを使った開発ガイド（初心者向け）</div>
+        </div>
+        <div class="deck-arrow">→</div>
+      </a>
+      <a href="https://speakerdeck.com/zashii/sisutemukai-fa-pmtositebi-yao-naquan-ti-gan" target="_blank" class="deck-item">
+        <div class="deck-left">
+          <div class="deck-cat">PM</div>
+          <div class="deck-title">システム開発PMとして必要な全体感</div>
+        </div>
+        <div class="deck-arrow">→</div>
+      </a>
+      <a href="https://speakerdeck.com/zashii/jin-bu-bao-gao-noozuo-fa" target="_blank" class="deck-item">
+        <div class="deck-left">
+          <div class="deck-cat">MTG</div>
+          <div class="deck-title">進捗報告のお作法</div>
+        </div>
+        <div class="deck-arrow">→</div>
+      </a>
+      <a href="https://speakerdeck.com/zashii/hui-yi-jin-xing-noozuo-fa" target="_blank" class="deck-item">
+        <div class="deck-left">
+          <div class="deck-cat">MTG</div>
+          <div class="deck-title">会議進行のお作法</div>
+        </div>
+        <div class="deck-arrow">→</div>
+      </a>
+      <a href="https://speakerdeck.com/zashii" target="_blank" class="deck-item deck-all">
+        <div class="deck-left">
+          <div class="deck-cat">ALL</div>
+          <div class="deck-title">すべての資料を見る — Speaker Deck</div>
+        </div>
+        <div class="deck-arrow" style="color: var(--navy);">→</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about-section">
+  <div class="about-wrap">
+    <div>
+      <div class="section-tag">About</div>
+      <h2>ZAXEL合同会社</h2>
+      <blockquote class="about-quote">
+        定性的な満足ではなく、数字で語れる成果を。<br>
+        クライアントと共に、課題の核心へ。
+      </blockquote>
+      <p style="color: var(--text-sub); font-size: 14px; line-height: 2;">
+        東京・岡山を拠点に活動。PM / BPRの専門知見と、Claude Code等AIツールを活用した開発力を組み合わせ、「感想・満足度（定性）」だけでなく、生産性・工数・バグ率といった<strong style="color: var(--navy); font-weight: 400;">事業成果（定量）</strong>にコミットします。
+      </p>
+    </div>
+    <div>
+      <div class="section-tag" style="margin-bottom: 28px; margin-top: 8px;">Expertise</div>
+      <div class="skills-list">
+        <div class="skill-row">
+          <div class="skill-header">
+            <div class="skill-name">Project Management</div>
+            <div class="skill-pct">95</div>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="width: 95%"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-header">
+            <div class="skill-name">BPR / 業務設計</div>
+            <div class="skill-pct">92</div>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="width: 92%"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-header">
+            <div class="skill-name">組織設計・人材育成</div>
+            <div class="skill-pct">85</div>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="width: 85%"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-header">
+            <div class="skill-name">経営課題・戦略立案</div>
+            <div class="skill-pct">82</div>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="width: 82%"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-header">
+            <div class="skill-name">AI App Development</div>
+            <div class="skill-pct">78</div>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="width: 78%"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-header">
+            <div class="skill-name">要件定義 / WBS</div>
+            <div class="skill-pct">92</div>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="width: 92%"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="section-tag" style="justify-content: center;">Contact</div>
+  <h2>まずは、相談から。</h2>
+  <p class="contact-sub">
+    経営課題・PM・BPR・組織設計・AI開発、どんな悩みでもお気軽にどうぞ。<br>
+    「点」の支援ではなく、継続的なパートナーシップをご提案します。
+  </p>
+  <div class="contact-links">
+    <a href="https://zashii.hatenablog.com/" target="_blank" class="contact-link">ブログ / Hatenablog</a>
+    <a href="https://speakerdeck.com/zashii" target="_blank" class="contact-link">Speaker Deck</a>
+  </div>
+  <p class="contact-note">※ お問い合わせはブログのコメント欄・SNSよりお願いします</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">ZAXEL</div>
+  <p>© 2025 ZAXEL LLC. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
