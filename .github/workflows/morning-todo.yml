@@ -1,0 +1,28 @@
+name: 毎朝ToDoメール送信
+
+on:
+  schedule:
+    - cron: '0 21 * * *'  # UTC 21:00 = JST 06:00
+  workflow_dispatch:       # 手動実行も可能
+
+jobs:
+  send-todo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install anthropic
+
+      - name: Generate and send ToDo
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          TO_EMAIL: ${{ secrets.TO_EMAIL }}
+        run: python scripts/morning_todo.py
