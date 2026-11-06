@@ -686,6 +686,65 @@
   .tc-dev h3 { font-size: 20px; font-weight: 700; color: var(--navy); white-space: nowrap; }
   .tc-dev p { font-size: 17px; font-weight: 400; line-height: 1.9; color: var(--text-mid); }
 
+
+  /* ─── 図・画面（2本柱） ─── */
+  .ico { width: 44px; height: 44px; fill: none; stroke: var(--navy); stroke-width: 2.2; stroke-linejoin: round; stroke-linecap: round; }
+  .flow4 { display: flex; align-items: stretch; gap: 12px; margin-bottom: 40px; }
+  .flow4-step {
+    flex: 1; background: var(--white); border: 1px solid var(--border);
+    padding: 28px 16px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 10px;
+  }
+  .flow4-step b { font-size: 22px; color: var(--navy); }
+  .flow4-step span { font-size: 15px; color: var(--text-sub); }
+  .flow4-arrow { align-self: center; font-size: 26px; color: var(--gold); }
+  .theme3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 40px; }
+  .theme3 div { border-left: 4px solid var(--gold); background: var(--cream); padding: 18px 22px; }
+  .theme3 b { display: block; font-size: 18px; color: var(--navy); margin-bottom: 4px; }
+  .theme3 span { font-size: 15px; color: var(--text-sub); }
+  .ba { display: grid; grid-template-columns: 1fr auto 1fr; gap: 24px; align-items: center; }
+  .ba-col { border: 1px solid rgba(255,255,255,0.25); padding: 24px 28px; }
+  .ba-col.after { border-color: var(--gold-light); background: rgba(255,255,255,0.06); }
+  .ba-tag { font-family: 'DM Mono', monospace; font-size: 13px; letter-spacing: 0.2em; color: var(--gold-light); margin-bottom: 12px; }
+  .ba ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .ba li { font-size: 18px; color: rgba(255,255,255,0.9); }
+  .ba li b { color: var(--white); font-size: 22px; margin-right: 4px; }
+  .ba-arrow { font-size: 34px; color: var(--gold-light); }
+
+  .tc-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; flex-wrap: wrap; margin-bottom: 40px; }
+  .tc-head-right { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .tc-head-right .tc-status { margin-bottom: 0; }
+  .phones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+  .phones figure { margin: 0; text-align: center; }
+  .phone {
+    width: 100%; max-width: 260px; margin: 0 auto 16px; aspect-ratio: 1170 / 2532;
+    border: 8px solid var(--navy); border-radius: 30px; overflow: hidden; background: #fff;
+    box-shadow: 0 18px 40px rgba(14,28,47,0.18);
+  }
+  .phone img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+  .phones figcaption { font-size: 15px; color: var(--text-sub); line-height: 1.7; }
+  .phones figcaption b { display: block; font-size: 18px; color: var(--navy); }
+  .phones-note { text-align: center; font-size: 13px; color: var(--text-light); margin-top: 16px; }
+  .tc-map {
+    margin-top: 48px; display: grid; grid-template-columns: 1fr auto 1fr auto 1fr;
+    gap: 16px; align-items: center; text-align: center;
+  }
+  .tc-node { border: 1px solid var(--border-strong); background: var(--white); padding: 18px 12px; }
+  .tc-node b { display: block; font-size: 17px; color: var(--navy); }
+  .tc-node span { font-size: 14px; color: var(--text-sub); }
+  .tc-core { background: var(--navy); border-color: var(--navy); }
+  .tc-core b { color: var(--white); font-family: 'Cormorant Garamond', serif; font-size: 26px; }
+  .tc-core span { color: rgba(255,255,255,0.85); }
+  .tc-link { font-size: 26px; color: var(--gold); }
+  .tc-sub { grid-column: 3; border-style: dashed; }
+
+  .deck-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 24px; }
+  .deck-card { text-decoration: none; color: var(--text); border: 1px solid var(--border); background: var(--white); transition: box-shadow .2s, transform .2s; }
+  .deck-card:hover { box-shadow: 0 12px 28px rgba(14,28,47,0.12); transform: translateY(-2px); }
+  .deck-card img { width: 100%; aspect-ratio: 1920 / 1072; object-fit: cover; display: block; border-bottom: 1px solid var(--border); }
+  .deck-card div { padding: 14px 18px; font-size: 16px; font-weight: 500; line-height: 1.6; color: var(--navy); }
+  .deck-card small { display: block; font-family: 'DM Mono', monospace; font-size: 12px; color: var(--gold); letter-spacing: .15em; }
+  .deck-more { display: inline-block; font-size: 16px; color: var(--navy); text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: 2px; }
+
   /* ─── PORTFOLIO ─── */
   .portfolio-wrap { max-width: 1100px; margin: 0 auto; }
   .deck-grid {
@@ -903,6 +962,11 @@
     .case-box { padding: 36px 24px; }
     .case-cols, .case-nums, .tc-grid, .tc-dev { grid-template-columns: 1fr; }
     .tc-dev h3 { white-space: normal; }
+    .flow4 { display: grid; grid-template-columns: 1fr 1fr; } .flow4-arrow { display: none; } .flow4-step { padding: 18px 10px; }
+    .phone { max-width: 220px; }
+    .theme3, .phones, .deck-cards { grid-template-columns: 1fr; }
+    .ba { grid-template-columns: 1fr; } .ba-arrow { transform: rotate(90deg); text-align: center; }
+    .tc-map { grid-template-columns: 1fr; } .tc-link { transform: rotate(90deg); } .tc-sub { grid-column: auto; }
     .track-intro { grid-template-columns: 1fr; gap: 32px; }
     footer { flex-direction: column; gap: 14px; text-align: center; padding: 28px; }
     .results-strip { padding: 0 28px; }
@@ -947,8 +1011,7 @@
     <div class="hero-tag">ZAXEL合同会社</div>
     <h1>本質的な<em>問題発見</em>と、<br>確実な<em>解決</em>を共に。</h1>
     <p class="hero-sub">
-      「何が本当の課題なのか」——その問いに向き合い続けることが、私たちの出発点です。<br>
-      経営コンサルティングと、自社アプリ「TrustCar」をはじめとするアプリ開発。<br>考える力と作る力を掛け合わせ、クライアントの「ありたい姿」への到達を伴走します。
+      経営コンサルティングと、アプリ開発。<br>考える力と作る力で、伴走します。
     </p>
     <div class="hero-actions">
       <a href="#contact" class="btn-primary">相談する</a>
@@ -979,12 +1042,10 @@
 
     <div class="track-intro">
       <div class="track-statement">
-        表面的な症状ではなく、<br>
-        構造的な原因を捉える。<br>
-        本質から解く支援が、持続的な成果を生みます。
+        症状ではなく、<br>原因から解く。
       </div>
       <div class="track-note">
-        東京・岡山を拠点に、IT・製造・公共・スタートアップと多様な業界でのプロジェクト推進経験を持ちます。経営者自身でもあるため、現場の課題から経営判断まで、一気通貫した視点で支援します。
+        東京・岡山を拠点に、IT・公共・スタートアップで実績。現場から経営まで支援します。
       </div>
     </div>
 
@@ -993,7 +1054,7 @@
       <div class="client-card">
         <div class="client-type">Large Enterprise</div>
         <h3>大手IT企業<br>プロダクト開発PM</h3>
-        <p>100名超の開発組織においてWBS・Exit条件・チケット管理を標準化。チャット依存・属人化から脱却し、ダッシュボード管理体制を構築。</p>
+        <p>100名超の開発組織で、進め方と管理を標準化。</p>
         <div class="client-result">
           <span class="client-result-num">15</span>
           <span class="client-result-unit">%</span>
@@ -1005,7 +1066,7 @@
       <div class="client-card">
         <div class="client-type">Public / Infrastructure</div>
         <h3>公共・インフラ領域<br>業務改革・BPR推進</h3>
-        <p>複雑化した業務フローを構造的に分析・再設計。標準化・仕組み化により、担当者依存リスクを排除し、引き継ぎコストを大幅削減。</p>
+        <p>複雑な業務を整理し、担当者に頼らない形に。</p>
         <div class="client-result">
           <span class="client-result-num">40</span>
           <span class="client-result-unit">%</span>
@@ -1017,7 +1078,7 @@
       <div class="client-card">
         <div class="client-type">Venture / Startup</div>
         <h3>スタートアップ<br>組織設計・育成支援</h3>
-        <p>Will/Can/Mustを軸とした自律型組織の設計。評価制度・行動指針を連動させ、採用から戦力化までのリードタイムを短縮。</p>
+        <p>評価制度と行動指針を整え、早く戦力に。</p>
         <div class="client-result">
           <span class="client-result-num">80</span>
           <span class="client-result-unit">%</span>
@@ -1029,7 +1090,7 @@
       <div class="client-card">
         <div class="client-type">Development Reform</div>
         <h3>開発組織<br>手戻りゼロ体制構築</h3>
-        <p>QCD優先順位判断・期待値マネジメントを導入し、要件変更による手戻りを抑制。バグ修正時間を大幅短縮した開発体制を実現。</p>
+        <p>優先順位の決め方を整え、手戻りを削減。</p>
         <div class="client-result">
           <span class="client-result-num">20</span>
           <span class="client-result-unit">%</span>
@@ -1041,7 +1102,7 @@
       <div class="client-card">
         <div class="client-type">AI Native Development</div>
         <h3>AI活用<br>MVP高速開発</h3>
-        <p>Claude Code等のAIネイティブ開発で工数を劇的に圧縮。コンサルで得た業務知識を直接実装に活かし、要件定義から本番稼働まで最短距離で実現。</p>
+        <p>AIを使った開発で、早く・安く形に。</p>
         <div class="client-result">
           <span class="client-result-num">60</span>
           <span class="client-result-unit">%</span>
@@ -1053,7 +1114,7 @@
       <div class="client-card">
         <div class="client-type">Management Advisory</div>
         <h3>経営者目線の<br>アドバイザリー支援</h3>
-        <p>自身も経営者として予実管理・キャッシュフロー・経営戦略の実務を持つ。現場感覚と経営判断を両立した、実行可能なアドバイスを提供。</p>
+        <p>経営者の立場から、実行できる助言を。</p>
         <div class="client-result">
           <span class="client-result-num">3</span>
           <span class="client-result-unit">社</span>
@@ -1064,77 +1125,65 @@
   </div>
 </section>
 
-<!-- RESULTS STRIP -->
-<div class="results-strip">
-  <div class="results-inner">
-    <div class="result-item">
-      <span class="result-num">15<span class="result-unit">%</span></span>
-      <div class="result-label">Productivity Up</div>
-      <div class="result-desc">開発生産性向上</div>
-    </div>
-    <div class="result-item">
-      <span class="result-num">20<span class="result-unit">%</span></span>
-      <div class="result-label">Bug Fix Down</div>
-      <div class="result-desc">バグ修正時間短縮</div>
-    </div>
-    <div class="result-item">
-      <span class="result-num">40<span class="result-unit">%</span></span>
-      <div class="result-label">Process Cost Down</div>
-      <div class="result-desc">業務プロセスコスト削減</div>
-    </div>
-    <div class="result-item">
-      <span class="result-num">80<span class="result-unit">%</span></span>
-      <div class="result-label">Adoption Rate</div>
-      <div class="result-desc">新手法導入率達成</div>
-    </div>
-  </div>
-</div>
-
 <!-- 経営コンサルティング -->
 <section id="consulting" class="pillar-section">
   <div class="pillar-wrap">
     <div class="section-tag">Management Consulting</div>
     <h2>経営コンサルティング</h2>
-    <p class="section-desc">社内のシステム、開発の進め方、会社の数字。現場で起きている困りごとを伺い、原因を探して、使いながら少しずつ直していきます。</p>
+    <p class="section-desc">現場の困りごとを伺い、使いながら直していきます。</p>
 
-    <div class="pillar-themes">
-      <div class="pillar-theme">
-        <div class="pillar-theme-num">01 / Business Systems</div>
-        <h3>業務システムの改善</h3>
-        <p>作業時間や予定の管理など、毎日使っている社内システムを、使う方の声をもとに直します。今の使い方を変えずに改修します。</p>
+    <div class="flow4">
+      <div class="flow4-step">
+        <svg viewBox="0 0 48 48" class="ico"><path d="M8 12h32v20H20l-8 6v-6H8z"/></svg>
+        <b>聞く</b><span>使う人の声から</span>
       </div>
-      <div class="pillar-theme">
-        <div class="pillar-theme-num">02 / Quality &amp; Process</div>
-        <h3>開発体制・品質の立て直し</h3>
-        <p>「直すたびに別の所が壊れる」状態をなくします。動作の自動確認、反映の手順書、マニュアルをそろえ、安心して直せるようにします。</p>
+      <div class="flow4-arrow">→</div>
+      <div class="flow4-step">
+        <svg viewBox="0 0 48 48" class="ico"><path d="M30 8l10 10-20 20H10V28z"/><path d="M26 12l10 10"/></svg>
+        <b>直す</b><span>今の使い方は崩さず</span>
       </div>
-      <div class="pillar-theme">
-        <div class="pillar-theme-num">03 / Advisory</div>
-        <h3>経営アドバイザリー</h3>
-        <p>私自身も会社を経営しています。予算と実績の管理、資金繰り、目標の立て方まで、経営者の立場でご相談に乗ります。</p>
+      <div class="flow4-arrow">→</div>
+      <div class="flow4-step">
+        <svg viewBox="0 0 48 48" class="ico"><circle cx="24" cy="24" r="16"/><path d="M16 24l6 6 11-12"/></svg>
+        <b>確かめる</b><span>自動で毎回チェック</span>
       </div>
+      <div class="flow4-arrow">→</div>
+      <div class="flow4-step">
+        <svg viewBox="0 0 48 48" class="ico"><path d="M12 6h18l8 8v28H12z"/><path d="M30 6v8h8M18 24h14M18 31h14"/></svg>
+        <b>渡す</b><span>手順書とマニュアル</span>
+      </div>
+    </div>
+
+    <div class="theme3">
+      <div><b>業務システムの改善</b><span>毎日使う社内システムを使いやすく</span></div>
+      <div><b>開発体制・品質の立て直し</b><span>直すたびに壊れる、をなくす</span></div>
+      <div><b>経営アドバイザリー</b><span>予実・資金繰り・目標づくり</span></div>
     </div>
 
     <div class="case-box">
       <div class="case-head">
         <div class="case-label">— Case Study</div>
-        <div class="case-client">IT企業（社名は伏せています）／継続してご支援中</div>
+        <div class="case-client">IT企業（社名非公開）／継続支援中</div>
       </div>
-      <h3>毎日使う社内の工数管理システムを、<br>現場の声をもとに使いやすく直しました。</h3>
-      <div class="case-cols">
-        <div>
-          <h4>ご相談の内容</h4>
-          <p>社員の作業時間や、案件ごとの予定と実績を記録する社内システムを長く使われていました。「文字が小さくて見づらい」「担当者で絞り込みたい」「カレンダーの予定が登録できないことがある」といった声が現場から出ていました。また、以前の改修では、直したはずの画面で別の機能が使えなくなることもありました。</p>
+      <h3>社内の工数管理システムを、使いやすく直した事例</h3>
+      <div class="ba">
+        <div class="ba-col">
+          <div class="ba-tag">Before</div>
+          <ul>
+            <li>文字が小さく見づらい</li>
+            <li>直すと別の所が壊れる</li>
+            <li>集計がずれないか不安</li>
+          </ul>
         </div>
-        <div>
-          <h4>行ったこと</h4>
-          <p>使っている方の要望を一つずつ伺い、該当する画面を改修しました。直すたびに、これまでの使い方がそのまま動くかを自動で確認する仕組みも作りました。本番に出す前には、作業時間の集計がずれないかも確かめています。反映の手順書と操作マニュアルも毎回お渡しし、社内の方が自分で更新できるようにしました。</p>
+        <div class="ba-arrow">→</div>
+        <div class="ba-col after">
+          <div class="ba-tag">After</div>
+          <ul>
+            <li><b>4画面</b>を見やすく改修</li>
+            <li><b>20項目</b>を自動で確認</li>
+            <li><b>手順書つき</b>で社内で更新</li>
+          </ul>
         </div>
-      </div>
-      <div class="case-nums">
-        <div class="case-num"><b>4画面</b><span>予実・スケジュールなどの画面を改修</span></div>
-        <div class="case-num"><b>20項目</b><span>画面の動きを自動で確認できるように</span></div>
-        <div class="case-num"><b>毎回</b><span>手順書・マニュアルをお渡し</span></div>
       </div>
     </div>
   </div>
@@ -1145,40 +1194,45 @@
   <div class="pillar-wrap">
     <div class="section-tag">App Development — Our Product</div>
     <h2>アプリ開発</h2>
-    <p class="section-desc">自社プロダクトとして、車の管理アプリ「TrustCar」を開発しています。業務の知識とAIを使った開発の速さを、自分たちのサービスで形にしています。</p>
-
-    <div class="tc-grid">
+    <div class="tc-head">
       <div>
         <div class="tc-name">TrustCar</div>
-        <div class="tc-catch">クルマのことを、もっと楽に・安心に・楽しく。</div>
-        <p class="tc-lead">整備や車検の記録、お知らせ、お店とのやりとりをひとつのアプリに。持ち主と整備工場が同じ履歴を見ながら話せるので、「前に何をしたっけ」がなくなります。クルマ好き同士でつながる場もあります。</p>
-        <div class="tc-status">いま、整備工場とそのお客さまで試験提供中です</div>
-        <div class="hero-actions">
-          <a href="#contact" class="btn-primary">導入を相談する</a>
-        </div>
+        <div class="tc-catch">クルマのことを、楽に・安心に・楽しく。</div>
       </div>
-      <div class="tc-for">
-        <div class="tc-for-item">
-          <div class="who">For Drivers</div>
-          <h3>クルマを持つ方へ</h3>
-          <p>整備・車検の記録と次の予定を手元で管理。お店とのやりとりもアプリの中で済みます。</p>
-        </div>
-        <div class="tc-for-item">
-          <div class="who">For Companies</div>
-          <h3>社用車を管理する方へ</h3>
-          <p>複数台の車検・点検の予定をまとめて確認。総務の日程調整の手間を減らします。</p>
-        </div>
-        <div class="tc-for-item">
-          <div class="who">For Shops</div>
-          <h3>整備工場・販売店の方へ</h3>
-          <p>お客さまと同じ履歴を見ながら整備の方針を相談できます。対話がスムーズになります。</p>
-        </div>
+      <div class="tc-head-right">
+        <div class="tc-status">整備工場とそのお客さまで試験提供中</div>
+        <a href="#contact" class="btn-primary">導入を相談する</a>
       </div>
+    </div>
+
+    <div class="phones">
+      <figure>
+        <div class="phone"><img src="img/trustcar/vehicle.png" alt="愛車の記録画面" loading="lazy"></div>
+        <figcaption><b>愛車の記録</b>整備・車検・保険をひとつに</figcaption>
+      </figure>
+      <figure>
+        <div class="phone"><img src="img/trustcar/report.png" alt="維持費レポート画面" loading="lazy"></div>
+        <figcaption><b>維持費が分かる</b>同じ車の人の実例と比べられる</figcaption>
+      </figure>
+      <figure>
+        <div class="phone"><img src="img/trustcar/ledger.png" alt="お店の顧客台帳画面" loading="lazy"></div>
+        <figcaption><b>お店の顧客台帳</b>車検が近い順にひと目で</figcaption>
+      </figure>
+    </div>
+    <p class="phones-note">画面はサンプルデータです。</p>
+
+    <div class="tc-map">
+      <div class="tc-node"><b>クルマを持つ方</b><span>記録・お知らせ</span></div>
+      <div class="tc-link">⇄</div>
+      <div class="tc-node tc-core"><b>TrustCar</b><span>同じ履歴を共有</span></div>
+      <div class="tc-link">⇄</div>
+      <div class="tc-node"><b>整備工場・販売店</b><span>顧客台帳・相談</span></div>
+      <div class="tc-node tc-sub"><b>社用車を管理する法人</b><span>車検・点検の予定をまとめて</span></div>
     </div>
 
     <div class="tc-dev">
       <h3>受託開発も承ります</h3>
-      <p>TrustCar と同じ体制で、業務アプリ・社内システムの開発をお受けしています。Claude Code などのAI開発で工数を抑え、「本当に必要な機能」から小さく作って育てます。</p>
+      <p>業務アプリ・社内システムを、AI開発で小さく早く作ります。</p>
     </div>
   </div>
 </section>
@@ -1188,13 +1242,13 @@
   <div class="services-wrap">
     <div class="section-tag">Services</div>
     <h2>支援領域</h2>
-    <p class="section-desc">「何が本当の問題か」を共に問い直すところから始めます。本質的な課題発見と、定量成果へのコミットが私たちのスタイルです。</p>
+    <p class="section-desc">課題の発見から、成果が出るまで。</p>
     <div class="services-grid">
       <div class="service-card">
         <div class="service-num">01</div>
         <h3>経営課題・解決策提案</h3>
         <div class="service-en">Strategy Consulting</div>
-        <p>現状（As-Is）の構造的分析から「ありたい姿（To-Be）」を設計。課題の核心に最短距離でリーチし、実行可能な解決策を提案します。</p>
+        <p>今とありたい姿の差から、打ち手を決めます。</p>
         <div class="service-tags">
           <span class="tag">As-Is / To-Be</span>
           <span class="tag">課題構造化</span>
@@ -1205,7 +1259,7 @@
         <div class="service-num">02</div>
         <h3>プロジェクトマネジメント</h3>
         <div class="service-en">Project Management</div>
-        <p>WBS・Exit条件・チケット管理を標準化し、手戻りゼロの推進体制を構築。QCD優先順位判断と期待値マネジメントで確実に成果へ導きます。</p>
+        <p>計画・管理を整え、手戻りなく進めます。</p>
         <div class="service-tags">
           <span class="tag">WBS</span>
           <span class="tag">リスク管理</span>
@@ -1216,7 +1270,7 @@
         <div class="service-num">03</div>
         <h3>組織設計</h3>
         <div class="service-en">Organization Design</div>
-        <p>経営理念・行動指針・評価制度を連動させた「文化を作る組織」を設計。Will / Can / Mustの自律型メンバーが活躍できる仕組みを構築します。</p>
+        <p>理念・行動指針・評価制度をつなげます。</p>
         <div class="service-tags">
           <span class="tag">評価制度</span>
           <span class="tag">行動指針</span>
@@ -1227,7 +1281,7 @@
         <div class="service-num">04</div>
         <h3>新人育成</h3>
         <div class="service-en">Talent Development</div>
-        <p>「経営者視点」と「現場感覚」を両立する人材育成プログラムを提供。成果の出る型を最短距離で習得させ、即戦力化を実現します。</p>
+        <p>成果の出る型を、研修とOJTで身につけます。</p>
         <div class="service-tags">
           <span class="tag">研修設計</span>
           <span class="tag">OJT支援</span>
@@ -1238,7 +1292,7 @@
         <div class="service-num">05</div>
         <h3>BPR（業務改善）</h3>
         <div class="service-en">Business Process Reengineering</div>
-        <p>複雑な業務フローを構造的に分析し、標準化・仕組み化を実現。チャット依存・属人化から脱却し、ダッシュボード管理で可視化します。</p>
+        <p>業務を標準化し、人に頼らない仕組みに。</p>
         <div class="service-tags">
           <span class="tag">業務標準化</span>
           <span class="tag">フロー設計</span>
@@ -1249,7 +1303,7 @@
         <div class="service-num">06</div>
         <h3>アプリ開発</h3>
         <div class="service-en">App Development</div>
-        <p>Claude Code等AIネイティブ開発で工数を劇的に圧縮。「本当に必要な機能」からMVPで実装し、コンサルで得た業務知識を開発に直結させます。</p>
+        <p>必要な機能から、小さく早く作ります。</p>
         <div class="service-tags">
           <span class="tag">Claude Code</span>
           <span class="tag">MVP</span>
@@ -1263,7 +1317,7 @@
       <div>
         <div class="advisory-tag">— Management Advisory</div>
         <h3>経営者目線のアドバイザリー</h3>
-        <p>自身も合同会社を経営する立場から、「現場で使える経営の知恵」を提供します。コンサルタントではなく、共に経営を考えるパートナーとして、予実管理・資金繰り・経営戦略の実務に即したアドバイスが可能です。</p>
+        <p>自らも経営する立場で、一緒に経営を考えます。</p>
       </div>
       <div class="advisory-items">
         <div class="advisory-item">予実管理・バジェットコントロール</div>
@@ -1281,51 +1335,30 @@
   <div class="portfolio-wrap">
     <div class="section-tag">Works & Knowledge</div>
     <h2>公開資料・実績</h2>
-    <p class="section-desc">PM・BPR・AI開発に関するナレッジをSpeaker Deckで公開しています。</p>
-    <div class="deck-grid">
-      <a href="https://speakerdeck.com/zashii/chu-xin-zhe-xiang-ke-claude-codedehe-gadekirunoka" target="_blank" class="deck-item">
-        <div class="deck-left">
-          <div class="deck-cat">AI</div>
-          <div class="deck-title">【初心者向け】Claude Codeで何ができるのか</div>
-        </div>
-        <div class="deck-arrow">→</div>
+    <p class="section-desc">PM・AI開発・会議の進め方などの資料を公開しています。</p>
+    <div class="deck-cards">
+      <a href="https://speakerdeck.com/zashii/chu-xin-zhe-xiang-ke-claude-codedehe-gadekirunoka" target="_blank" rel="noopener" class="deck-card">
+        <img src="img/decks/chu-xin-zhe-xiang-ke-claude-codedehe-gadekirunoka.jpg" alt="【初心者向け】Claude Codeで何ができるのか" loading="lazy">
+        <div><small>AI</small>【初心者向け】Claude Codeで何ができるのか</div>
       </a>
-      <a href="https://speakerdeck.com/zashii/claude-codewoshi-tutakai-fa-gaido-chu-xin-zhe-xiang-ke" target="_blank" class="deck-item">
-        <div class="deck-left">
-          <div class="deck-cat">DEV</div>
-          <div class="deck-title">Claude Codeを使った開発ガイド（初心者向け）</div>
-        </div>
-        <div class="deck-arrow">→</div>
+      <a href="https://speakerdeck.com/zashii/claude-codewoshi-tutakai-fa-gaido-chu-xin-zhe-xiang-ke" target="_blank" rel="noopener" class="deck-card">
+        <img src="img/decks/claude-codewoshi-tutakai-fa-gaido-chu-xin-zhe-xiang-ke.jpg" alt="Claude Codeを使った開発ガイド（初心者向け）" loading="lazy">
+        <div><small>DEV</small>Claude Codeを使った開発ガイド（初心者向け）</div>
       </a>
-      <a href="https://speakerdeck.com/zashii/sisutemukai-fa-pmtositebi-yao-naquan-ti-gan" target="_blank" class="deck-item">
-        <div class="deck-left">
-          <div class="deck-cat">PM</div>
-          <div class="deck-title">システム開発PMとして必要な全体感</div>
-        </div>
-        <div class="deck-arrow">→</div>
+      <a href="https://speakerdeck.com/zashii/sisutemukai-fa-pmtositebi-yao-naquan-ti-gan" target="_blank" rel="noopener" class="deck-card">
+        <img src="img/decks/sisutemukai-fa-pmtositebi-yao-naquan-ti-gan.jpg" alt="システム開発PMとして必要な全体感" loading="lazy">
+        <div><small>PM</small>システム開発PMとして必要な全体感</div>
       </a>
-      <a href="https://speakerdeck.com/zashii/jin-bu-bao-gao-noozuo-fa" target="_blank" class="deck-item">
-        <div class="deck-left">
-          <div class="deck-cat">MTG</div>
-          <div class="deck-title">進捗報告のお作法</div>
-        </div>
-        <div class="deck-arrow">→</div>
+      <a href="https://speakerdeck.com/zashii/jin-bu-bao-gao-noozuo-fa" target="_blank" rel="noopener" class="deck-card">
+        <img src="img/decks/jin-bu-bao-gao-noozuo-fa.jpg" alt="進捗報告のお作法" loading="lazy">
+        <div><small>MTG</small>進捗報告のお作法</div>
       </a>
-      <a href="https://speakerdeck.com/zashii/hui-yi-jin-xing-noozuo-fa" target="_blank" class="deck-item">
-        <div class="deck-left">
-          <div class="deck-cat">MTG</div>
-          <div class="deck-title">会議進行のお作法</div>
-        </div>
-        <div class="deck-arrow">→</div>
-      </a>
-      <a href="https://speakerdeck.com/zashii" target="_blank" class="deck-item deck-all">
-        <div class="deck-left">
-          <div class="deck-cat">ALL</div>
-          <div class="deck-title">すべての資料を見る — Speaker Deck</div>
-        </div>
-        <div class="deck-arrow">→</div>
+      <a href="https://speakerdeck.com/zashii/hui-yi-jin-xing-noozuo-fa" target="_blank" rel="noopener" class="deck-card">
+        <img src="img/decks/hui-yi-jin-xing-noozuo-fa.jpg" alt="会議進行のお作法" loading="lazy">
+        <div><small>MTG</small>会議進行のお作法</div>
       </a>
     </div>
+    <a href="https://speakerdeck.com/zashii" target="_blank" rel="noopener" class="deck-more">すべての資料を見る（Speaker Deck） →</a>
   </div>
 </section>
 
@@ -1336,11 +1369,10 @@
       <div class="section-tag">About</div>
       <h2>ZAXEL合同会社</h2>
       <blockquote class="about-quote">
-        表面的な症状ではなく、<br>構造的な原因を捉える。<br>本質から解くことが、持続的な成果を生む。
+        症状ではなく、原因から解く。
       </blockquote>
       <p class="about-text">
-        東京・岡山を拠点に、大手IT・公共・スタートアップと多様な業界でのPM / BPR実績を持ちます。<b>自身も経営者</b>として予実管理・経営戦略の実務経験を持つため、現場の課題から経営判断まで一気通貫で支援可能です。<br><br>
-        「何が本当の問題か」を問い直すことを出発点とし、Claude Code等AIツールを活用した開発力も組み合わせて、<b>事業成果（定量）にコミット</b>します。
+        東京・岡山を拠点に、PM・業務改善・AI開発で支援しています。<b>自身も経営者</b>として、現場から経営判断まで一緒に考えます。
       </p>
     </div>
     <div>
@@ -1400,8 +1432,7 @@
       <div class="section-tag" style="justify-content: center;">Contact</div>
       <h2>まずは、相談から。</h2>
       <p class="contact-sub">
-        「何が本当の問題か」——まずはその問いから始めましょう。<br>
-        経営コンサル・業務システムの改善・アプリ開発・TrustCar の導入、どんな相談でもお気軽にどうぞ。
+        経営・システム・アプリ・TrustCar、何でもどうぞ。
       </p>
     </div>
 
@@ -1412,7 +1443,7 @@
           <div class="contact-info-tag">— ZAXEL LLC</div>
         </div>
         <h3>経営の悩みを、<br>一緒に解決しましょう。</h3>
-        <p>大手・ベンチャー・公共領域を横断した経験と、自らの経営実務をもとに、本質的な問題発見から実行まで伴走します。まずはお気軽にフォームよりご連絡ください。</p>
+        <p>右のフォームからご連絡ください。</p>
         <div class="contact-info-links">
           <a href="https://zashii.hatenablog.com/" target="_blank" class="contact-info-link">ブログ / Hatenablog</a>
           <a href="https://speakerdeck.com/zashii" target="_blank" class="contact-info-link">Speaker Deck — 公開資料</a>
