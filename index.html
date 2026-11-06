@@ -4,15 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ZAXEL合同会社 | 本質的な問題発見と解決を、共に。</title>
-<meta name="description" content="ZAXEL合同会社は、大手・ベンチャーでの豊富な実績をもとに、本質的な問題発見と解決支援・PM/BPR・AI開発でクライアントの持続的成長を支援します。">
+<meta name="description" content="ZAXEL合同会社は、経営コンサルティング（業務システム改善・開発体制の立て直し・経営アドバイザリー）と、車の管理アプリ「TrustCar」をはじめとするアプリ開発で、クライアントの持続的成長を支援します。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Noto+Serif+JP:wght@300;400;700&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
 <style>
   :root {
     --navy: #0e1c2f;
     --navy-mid: #1a2e47;
-    --gold: #b8955a;
-    --gold-light: #d4a96a;
+    --gold: #8c6a36;
+    --gold-light: #e0bc80;
     --gold-pale: #f5efe4;
     --white: #ffffff;
     --off-white: #fafaf8;
@@ -20,9 +20,9 @@
     --border: #e8e4dd;
     --border-strong: #c8c2b8;
     --text: #1a1a1a;
-    --text-mid: #3d3d3d;
-    --text-sub: #6b6560;
-    --text-light: #9c9690;
+    --text-mid: #262626;
+    --text-sub: #4a4540;
+    --text-light: #6b6560;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -31,10 +31,12 @@
   body {
     background: var(--white);
     color: var(--text);
-    font-family: 'Noto Serif JP', Georgia, serif;
+    font-family: 'Noto Sans JP', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
+    font-variant-numeric: lining-nums;
   }
+  * { font-variant-numeric: lining-nums; }
 
   /* ─── NAV ─── */
   nav {
@@ -59,7 +61,7 @@
   .logo-emblem-inner {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 600;
-    font-size: 22px;
+    font-size: 24px;
     color: var(--navy);
     line-height: 1;
   }
@@ -67,14 +69,14 @@
   .logo-name {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 26px;
     letter-spacing: 0.3em;
     color: var(--navy);
     line-height: 1;
   }
   .logo-sub {
     font-family: 'DM Mono', monospace;
-    font-size: 8px;
+    font-size: 12px;
     letter-spacing: 0.28em;
     color: var(--text-light);
     text-transform: uppercase;
@@ -82,18 +84,16 @@
 
   .nav-links { display: flex; gap: 40px; list-style: none; }
   .nav-links a {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--text-sub);
+    font-size: 15px;
+    letter-spacing: 0.06em;
+    color: var(--text-mid);
     text-decoration: none;
     transition: color 0.25s;
   }
   .nav-links a:hover { color: var(--navy); }
   .nav-cta {
     font-family: 'DM Mono', monospace;
-    font-size: 10px;
+    font-size: 12px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--white);
@@ -168,18 +168,18 @@
     position: absolute;
     bottom: 64px; right: 64px;
     font-family: 'DM Mono', monospace;
-    font-size: 9px;
+    font-size: 12px;
     letter-spacing: 0.22em;
     color: var(--text-light);
     text-transform: uppercase;
     writing-mode: vertical-rl;
   }
 
-  .hero-content { position: relative; z-index: 1; max-width: 600px; }
+  .hero-content { position: relative; z-index: 1; max-width: 720px; }
 
   .hero-tag {
     font-family: 'DM Mono', monospace;
-    font-size: 11px;
+    font-size: 12px;
     letter-spacing: 0.28em;
     text-transform: uppercase;
     color: var(--gold);
@@ -194,7 +194,7 @@
 
   h1 {
     font-family: 'Noto Serif JP', serif;
-    font-weight: 300;
+    font-weight: 400;
     font-size: clamp(38px, 4.5vw, 64px);
     line-height: 1.65;
     letter-spacing: 0.06em;
@@ -216,12 +216,12 @@
   }
 
   .hero-sub {
-    font-size: 20px;
-    line-height: 2.1;
+    font-size: 22px;
+    line-height: 1.9;
     color: var(--text-mid);
     max-width: 520px;
     margin-bottom: 52px;
-    font-weight: 300;
+    font-weight: 400;
     animation: fadeUp 0.6s ease 0.3s both;
   }
 
@@ -234,7 +234,7 @@
     color: var(--white);
     padding: 16px 44px;
     font-family: 'Noto Serif JP', serif;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 400;
     letter-spacing: 0.1em;
     text-decoration: none;
@@ -247,7 +247,7 @@
     color: var(--navy);
     padding: 16px 44px;
     font-family: 'Noto Serif JP', serif;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 400;
     letter-spacing: 0.1em;
     text-decoration: none;
@@ -286,8 +286,8 @@
     color: var(--gold);
   }
   .stat-label {
-    font-size: 13px;
-    font-weight: 300;
+    font-size: 15px;
+    font-weight: 400;
     color: var(--text-sub);
     margin-top: 8px;
     line-height: 1.8;
@@ -297,7 +297,7 @@
   section { padding: 104px 64px; }
   .section-tag {
     font-family: 'DM Mono', monospace;
-    font-size: 10px;
+    font-size: 12px;
     letter-spacing: 0.26em;
     text-transform: uppercase;
     color: var(--gold);
@@ -318,9 +318,9 @@
     letter-spacing: 0.04em;
   }
   .section-desc {
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 2.1;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.9;
     color: var(--text-mid);
     max-width: 560px;
     margin-bottom: 56px;
@@ -339,18 +339,18 @@
   }
   .track-statement {
     font-family: 'Noto Serif JP', serif;
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 2;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.9;
     color: var(--navy);
     border-left: 2px solid var(--gold);
     padding-left: 28px;
   }
   .track-note {
-    font-size: 15px;
-    font-weight: 300;
+    font-size: 17px;
+    font-weight: 400;
     color: var(--text-mid);
-    line-height: 2.1;
+    line-height: 1.9;
     padding-top: 8px;
   }
 
@@ -387,7 +387,7 @@
 
   .client-type {
     font-family: 'DM Mono', monospace;
-    font-size: 9px;
+    font-size: 12px;
     letter-spacing: 0.22em;
     text-transform: uppercase;
     color: var(--gold);
@@ -399,17 +399,17 @@
   }
   .client-card h3 {
     font-family: 'Noto Serif JP', serif;
-    font-size: 17px;
+    font-size: 19px;
     font-weight: 700;
     color: var(--navy);
     margin-bottom: 16px;
     line-height: 1.6;
   }
   .client-card p {
-    font-size: 16px;
-    font-weight: 300;
+    font-size: 18px;
+    font-weight: 400;
     color: var(--text-mid);
-    line-height: 2;
+    line-height: 1.9;
     margin-bottom: 20px;
   }
   .client-result {
@@ -429,14 +429,14 @@
   }
   .client-result-unit {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 18px;
+    font-size: 20px;
     color: var(--gold-light);
   }
   .client-result-label {
     font-family: 'DM Mono', monospace;
-    font-size: 9px;
+    font-size: 12px;
     letter-spacing: 0.12em;
-    color: rgba(255,255,255,0.55);
+    color: rgba(255,255,255,0.9);
     text-transform: uppercase;
     margin-left: 4px;
   }
@@ -466,21 +466,21 @@
   .result-unit {
     font-family: 'Cormorant Garamond', serif;
     font-size: 40px;
-    color: var(--gold);
+    color: var(--gold-light);
   }
   .result-label {
     font-family: 'DM Mono', monospace;
-    font-size: 9px;
+    font-size: 12px;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.35);
+    color: rgba(255,255,255,0.9);
     margin-top: 16px;
     margin-bottom: 8px;
   }
   .result-desc {
-    font-size: 16px;
-    font-weight: 300;
-    color: rgba(255,255,255,0.65);
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.9);
     line-height: 1.8;
   }
 
@@ -516,14 +516,14 @@
 
   .service-num {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 13px;
+    font-size: 15px;
     letter-spacing: 0.2em;
-    color: var(--border-strong);
+    color: var(--gold);
     margin-bottom: 20px;
   }
   .service-card h3 {
     font-family: 'Noto Serif JP', serif;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
     color: var(--navy);
     margin-bottom: 8px;
@@ -531,22 +531,22 @@
   }
   .service-en {
     font-family: 'DM Mono', monospace;
-    font-size: 9px;
+    font-size: 12px;
     letter-spacing: 0.16em;
     color: var(--text-light);
     text-transform: uppercase;
     margin-bottom: 16px;
   }
   .service-card p {
-    font-size: 15px;
-    font-weight: 300;
+    font-size: 17px;
+    font-weight: 400;
     color: var(--text-mid);
-    line-height: 2;
+    line-height: 1.9;
   }
   .service-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 18px; }
   .tag {
     font-family: 'DM Mono', monospace;
-    font-size: 9px;
+    font-size: 12px;
     letter-spacing: 0.08em;
     padding: 5px 10px;
     border: 1px solid var(--border);
@@ -565,25 +565,25 @@
   }
   .advisory-tag {
     font-family: 'DM Mono', monospace;
-    font-size: 10px;
+    font-size: 12px;
     letter-spacing: 0.28em;
     text-transform: uppercase;
-    color: var(--gold);
+    color: var(--gold-light);
     margin-bottom: 12px;
   }
   .advisory-banner h3 {
     font-family: 'Noto Serif JP', serif;
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 700;
     color: var(--white);
     margin-bottom: 14px;
     line-height: 1.6;
   }
   .advisory-banner p {
-    font-size: 17px;
-    font-weight: 300;
-    color: rgba(255,255,255,0.7);
-    line-height: 2;
+    font-size: 19px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.9);
+    line-height: 1.9;
     max-width: 580px;
   }
   .advisory-items {
@@ -596,9 +596,9 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 15px;
-    font-weight: 300;
-    color: rgba(255,255,255,0.75);
+    font-size: 17px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.9);
   }
   .advisory-item::before {
     content: '';
@@ -606,6 +606,85 @@
     background: var(--gold);
     flex-shrink: 0;
   }
+
+
+  /* ─── 2本柱（経営コンサル / TrustCar） ─── */
+  .pillar-section { background: var(--white); }
+  .pillar-section.alt { background: var(--off-white); border-top: 1px solid var(--border); }
+  .pillar-wrap { max-width: 1100px; margin: 0 auto; }
+  .pillar-themes {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    border: 1px solid var(--border); margin-bottom: 56px;
+  }
+  .pillar-theme { padding: 36px 32px; border-right: 1px solid var(--border); background: var(--white); }
+  .pillar-theme:last-child { border-right: none; }
+  .pillar-theme-num {
+    font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.2em;
+    color: var(--gold); margin-bottom: 14px;
+  }
+  .pillar-theme h3 { font-size: 21px; font-weight: 700; color: var(--navy); line-height: 1.6; margin-bottom: 12px; }
+  .pillar-theme p { font-size: 17px; font-weight: 400; line-height: 1.9; color: var(--text-mid); }
+  .case-box { background: var(--navy); color: var(--white); padding: 52px; }
+  .case-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 20px; margin-bottom: 18px; }
+  .case-label {
+    font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.28em;
+    text-transform: uppercase; color: var(--gold-light);
+  }
+  .case-client { font-size: 16px; color: rgba(255,255,255,0.9); }
+  .case-box h3 { font-size: 25px; font-weight: 700; line-height: 1.6; margin-bottom: 28px; }
+  .case-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 36px; }
+  .case-cols h4 {
+    font-size: 15px; font-weight: 700; color: var(--gold-light);
+    letter-spacing: 0.1em; margin-bottom: 12px;
+  }
+  .case-cols p { font-size: 17px; font-weight: 400; line-height: 1.9; color: rgba(255,255,255,0.9); }
+  .case-cols ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .case-cols li {
+    position: relative; padding-left: 16px;
+    font-size: 17px; font-weight: 400; line-height: 1.9; color: rgba(255,255,255,0.9);
+  }
+  .case-cols li::before {
+    content: ''; position: absolute; left: 0; top: 0.85em;
+    width: 5px; height: 5px; background: var(--gold);
+  }
+  .case-nums {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid rgba(255,255,255,0.15); padding-top: 28px; gap: 24px;
+  }
+  .case-num b {
+    display: block; font-family: 'Cormorant Garamond', serif; font-size: 40px;
+    font-weight: 400; color: var(--white); line-height: 1.2;
+  }
+  .case-num span { font-size: 15px; color: rgba(255,255,255,0.9); line-height: 1.8; }
+  .case-note { margin-top: 24px; font-size: 14px; color: rgba(255,255,255,0.9); }
+
+  .tc-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: start; }
+  .tc-name {
+    font-family: 'Cormorant Garamond', serif; font-size: 52px; font-weight: 600;
+    color: var(--navy); line-height: 1.1; margin-bottom: 6px;
+  }
+  .tc-catch { font-size: 23px; font-weight: 700; color: var(--navy); line-height: 1.7; margin-bottom: 20px; }
+  .tc-lead { font-size: 18px; font-weight: 400; line-height: 1.9; color: var(--text-mid); margin-bottom: 28px; }
+  .tc-status {
+    display: inline-block; font-size: 15px; color: var(--navy);
+    border: 1px solid var(--gold); background: var(--gold-pale);
+    padding: 6px 14px; margin-bottom: 28px;
+  }
+  .tc-for { display: flex; flex-direction: column; border: 1px solid var(--border); }
+  .tc-for-item { padding: 26px 28px; border-bottom: 1px solid var(--border); background: var(--white); }
+  .tc-for-item:last-child { border-bottom: none; }
+  .tc-for-item .who {
+    font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 6px;
+  }
+  .tc-for-item h3 { font-size: 19px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+  .tc-for-item p { font-size: 16.5px; font-weight: 400; line-height: 1.95; color: var(--text-mid); }
+  .tc-dev {
+    margin-top: 56px; padding-top: 36px; border-top: 1px solid var(--border);
+    display: grid; grid-template-columns: auto 1fr; gap: 32px; align-items: start;
+  }
+  .tc-dev h3 { font-size: 20px; font-weight: 700; color: var(--navy); white-space: nowrap; }
+  .tc-dev p { font-size: 17px; font-weight: 400; line-height: 1.9; color: var(--text-mid); }
 
   /* ─── PORTFOLIO ─── */
   .portfolio-wrap { max-width: 1100px; margin: 0 auto; }
@@ -625,7 +704,7 @@
   .deck-left { display: flex; align-items: center; gap: 24px; }
   .deck-cat {
     font-family: 'DM Mono', monospace;
-    font-size: 9px;
+    font-size: 12px;
     letter-spacing: 0.18em;
     color: var(--gold);
     width: 36px;
@@ -633,11 +712,11 @@
     flex-shrink: 0;
   }
   .deck-title {
-    font-size: 17px;
+    font-size: 19px;
     font-weight: 400;
     color: var(--text);
   }
-  .deck-arrow { color: var(--border-strong); font-size: 16px; transition: color 0.2s; }
+  .deck-arrow { color: var(--border-strong); font-size: 18px; transition: color 0.2s; }
   .deck-item:hover .deck-arrow { color: var(--gold); }
 <a href="minutes.html" class="deck-item">
         <div class="deck-left">
@@ -658,30 +737,30 @@
   }
   .about-quote {
     font-family: 'Noto Serif JP', serif;
-    font-size: 20px;
-    font-weight: 300;
+    font-size: 22px;
+    font-weight: 400;
     color: var(--navy);
-    line-height: 2;
+    line-height: 1.9;
     border-left: 2px solid var(--gold);
     padding-left: 28px;
     margin: 32px 0;
-    font-style: italic;
+    font-style: normal;
   }
   .about-text {
-    font-size: 17px;
-    font-weight: 300;
+    font-size: 19px;
+    font-weight: 400;
     color: var(--text-mid);
-    line-height: 2.2;
+    line-height: 1.9;
   }
   .about-text b { color: var(--navy); font-weight: 400; }
 
   .skills-list { display: flex; flex-direction: column; gap: 22px; }
   .skill-row { display: flex; flex-direction: column; gap: 8px; }
   .skill-header { display: flex; justify-content: space-between; align-items: center; }
-  .skill-name { font-size: 15px; font-weight: 300; color: var(--text-mid); }
+  .skill-name { font-size: 17px; font-weight: 400; color: var(--text-mid); }
   .skill-pct {
     font-family: 'DM Mono', monospace;
-    font-size: 11px;
+    font-size: 12px;
     color: var(--text-light);
   }
   .skill-bar { height: 1px; background: var(--border); }
@@ -698,10 +777,10 @@
     margin-bottom: 64px;
   }
   .contact-sub {
-    font-size: 19px;
-    font-weight: 300;
+    font-size: 21px;
+    font-weight: 400;
     color: var(--text-mid);
-    line-height: 2.2;
+    line-height: 1.9;
     max-width: 600px;
     margin: 0 auto 24px;
   }
@@ -721,23 +800,23 @@
   }
   .contact-info-tag {
     font-family: 'DM Mono', monospace;
-    font-size: 9px;
+    font-size: 12px;
     letter-spacing: 0.26em;
     text-transform: uppercase;
     color: var(--gold);
   }
   .contact-info h3 {
     font-family: 'Noto Serif JP', serif;
-    font-size: 22px;
-    font-weight: 300;
+    font-size: 24px;
+    font-weight: 400;
     color: var(--white);
     line-height: 1.8;
   }
   .contact-info p {
-    font-size: 15px;
-    font-weight: 300;
-    color: rgba(255,255,255,0.65);
-    line-height: 2;
+    font-size: 17px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.9);
+    line-height: 1.9;
   }
   .contact-info-links {
     display: flex;
@@ -749,9 +828,9 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    font-size: 13px;
-    font-weight: 300;
-    color: rgba(255,255,255,0.6);
+    font-size: 15px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.9);
     text-decoration: none;
     transition: color 0.2s;
     padding: 12px 0;
@@ -761,7 +840,7 @@
   .contact-info-link::before {
     content: '→';
     color: var(--gold);
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .contact-form-wrap {
@@ -786,13 +865,13 @@
   .footer-logo {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 20px;
     letter-spacing: 0.3em;
     color: var(--navy);
   }
   footer p {
     font-family: 'DM Mono', monospace;
-    font-size: 10px;
+    font-size: 12px;
     color: var(--text-light);
     letter-spacing: 0.12em;
   }
@@ -818,6 +897,12 @@
     .about-wrap { grid-template-columns: 1fr; gap: 52px; }
     .contact-grid { grid-template-columns: 1fr; }
     .advisory-banner { grid-template-columns: 1fr; }
+    .pillar-themes { grid-template-columns: 1fr; }
+    .pillar-theme { border-right: none; border-bottom: 1px solid var(--border); }
+    .pillar-theme:last-child { border-bottom: none; }
+    .case-box { padding: 36px 24px; }
+    .case-cols, .case-nums, .tc-grid, .tc-dev { grid-template-columns: 1fr; }
+    .tc-dev h3 { white-space: normal; }
     .track-intro { grid-template-columns: 1fr; gap: 32px; }
     footer { flex-direction: column; gap: 14px; text-align: center; padding: 28px; }
     .results-strip { padding: 0 28px; }
@@ -836,10 +921,12 @@
     </div>
   </a>
   <ul class="nav-links">
-    <li><a href="#track">Track Record</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#portfolio">Works</a></li>
-    <li><a href="#about">About</a></li>
+    <li><a href="#consulting">経営コンサル</a></li>
+    <li><a href="#trustcar">TrustCar</a></li>
+    <li><a href="#track">実績</a></li>
+    <li><a href="#services">支援領域</a></li>
+    <li><a href="#portfolio">公開資料</a></li>
+    <li><a href="#about">会社概要</a></li>
   </ul>
   <a href="#contact" class="nav-cta">相談する</a>
 </nav>
@@ -861,11 +948,11 @@
     <h1>本質的な<em>問題発見</em>と、<br>確実な<em>解決</em>を共に。</h1>
     <p class="hero-sub">
       「何が本当の課題なのか」——その問いに向き合い続けることが、私たちの出発点です。<br>
-      PM / BPR・組織設計・AI開発の実装力を掛け合わせ、クライアントの「ありたい姿」への到達を伴走します。
+      経営コンサルティングと、自社アプリ「TrustCar」をはじめとするアプリ開発。<br>考える力と作る力を掛け合わせ、クライアントの「ありたい姿」への到達を伴走します。
     </p>
     <div class="hero-actions">
       <a href="#contact" class="btn-primary">相談する</a>
-      <a href="#track" class="btn-secondary">実績を見る</a>
+      <a href="#consulting" class="btn-secondary">事業を見る</a>
     </div>
     <div class="hero-stats">
       <div class="stat-item">
@@ -1002,6 +1089,99 @@
     </div>
   </div>
 </div>
+
+<!-- 経営コンサルティング -->
+<section id="consulting" class="pillar-section">
+  <div class="pillar-wrap">
+    <div class="section-tag">Management Consulting</div>
+    <h2>経営コンサルティング</h2>
+    <p class="section-desc">社内のシステム、開発の進め方、会社の数字。現場で起きている困りごとを伺い、原因を探して、使いながら少しずつ直していきます。</p>
+
+    <div class="pillar-themes">
+      <div class="pillar-theme">
+        <div class="pillar-theme-num">01 / Business Systems</div>
+        <h3>業務システムの改善</h3>
+        <p>作業時間や予定の管理など、毎日使っている社内システムを、使う方の声をもとに直します。今の使い方を変えずに改修します。</p>
+      </div>
+      <div class="pillar-theme">
+        <div class="pillar-theme-num">02 / Quality &amp; Process</div>
+        <h3>開発体制・品質の立て直し</h3>
+        <p>「直すたびに別の所が壊れる」状態をなくします。動作の自動確認、反映の手順書、マニュアルをそろえ、安心して直せるようにします。</p>
+      </div>
+      <div class="pillar-theme">
+        <div class="pillar-theme-num">03 / Advisory</div>
+        <h3>経営アドバイザリー</h3>
+        <p>私自身も会社を経営しています。予算と実績の管理、資金繰り、目標の立て方まで、経営者の立場でご相談に乗ります。</p>
+      </div>
+    </div>
+
+    <div class="case-box">
+      <div class="case-head">
+        <div class="case-label">— Case Study</div>
+        <div class="case-client">IT企業（社名は伏せています）／継続してご支援中</div>
+      </div>
+      <h3>毎日使う社内の工数管理システムを、<br>現場の声をもとに使いやすく直しました。</h3>
+      <div class="case-cols">
+        <div>
+          <h4>ご相談の内容</h4>
+          <p>社員の作業時間や、案件ごとの予定と実績を記録する社内システムを長く使われていました。「文字が小さくて見づらい」「担当者で絞り込みたい」「カレンダーの予定が登録できないことがある」といった声が現場から出ていました。また、以前の改修では、直したはずの画面で別の機能が使えなくなることもありました。</p>
+        </div>
+        <div>
+          <h4>行ったこと</h4>
+          <p>使っている方の要望を一つずつ伺い、該当する画面を改修しました。直すたびに、これまでの使い方がそのまま動くかを自動で確認する仕組みも作りました。本番に出す前には、作業時間の集計がずれないかも確かめています。反映の手順書と操作マニュアルも毎回お渡しし、社内の方が自分で更新できるようにしました。</p>
+        </div>
+      </div>
+      <div class="case-nums">
+        <div class="case-num"><b>4画面</b><span>予実・スケジュールなどの画面を改修</span></div>
+        <div class="case-num"><b>20項目</b><span>画面の動きを自動で確認できるように</span></div>
+        <div class="case-num"><b>毎回</b><span>手順書・マニュアルをお渡し</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- アプリ開発 / TrustCar -->
+<section id="trustcar" class="pillar-section alt">
+  <div class="pillar-wrap">
+    <div class="section-tag">App Development — Our Product</div>
+    <h2>アプリ開発</h2>
+    <p class="section-desc">自社プロダクトとして、車の管理アプリ「TrustCar」を開発しています。業務の知識とAIを使った開発の速さを、自分たちのサービスで形にしています。</p>
+
+    <div class="tc-grid">
+      <div>
+        <div class="tc-name">TrustCar</div>
+        <div class="tc-catch">クルマのことを、もっと楽に・安心に・楽しく。</div>
+        <p class="tc-lead">整備や車検の記録、お知らせ、お店とのやりとりをひとつのアプリに。持ち主と整備工場が同じ履歴を見ながら話せるので、「前に何をしたっけ」がなくなります。クルマ好き同士でつながる場もあります。</p>
+        <div class="tc-status">いま、整備工場とそのお客さまで試験提供中です</div>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">導入を相談する</a>
+        </div>
+      </div>
+      <div class="tc-for">
+        <div class="tc-for-item">
+          <div class="who">For Drivers</div>
+          <h3>クルマを持つ方へ</h3>
+          <p>整備・車検の記録と次の予定を手元で管理。お店とのやりとりもアプリの中で済みます。</p>
+        </div>
+        <div class="tc-for-item">
+          <div class="who">For Companies</div>
+          <h3>社用車を管理する方へ</h3>
+          <p>複数台の車検・点検の予定をまとめて確認。総務の日程調整の手間を減らします。</p>
+        </div>
+        <div class="tc-for-item">
+          <div class="who">For Shops</div>
+          <h3>整備工場・販売店の方へ</h3>
+          <p>お客さまと同じ履歴を見ながら整備の方針を相談できます。対話がスムーズになります。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tc-dev">
+      <h3>受託開発も承ります</h3>
+      <p>TrustCar と同じ体制で、業務アプリ・社内システムの開発をお受けしています。Claude Code などのAI開発で工数を抑え、「本当に必要な機能」から小さく作って育てます。</p>
+    </div>
+  </div>
+</section>
 
 <!-- SERVICES -->
 <section id="services" class="services-section">
@@ -1221,7 +1401,7 @@
       <h2>まずは、相談から。</h2>
       <p class="contact-sub">
         「何が本当の問題か」——まずはその問いから始めましょう。<br>
-        PM・BPR・組織設計・AI開発・経営アドバイザリー、どんな悩みでもお気軽にどうぞ。
+        経営コンサル・業務システムの改善・アプリ開発・TrustCar の導入、どんな相談でもお気軽にどうぞ。
       </p>
     </div>
 
