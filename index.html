@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ZAXEL合同会社 | 本質的な問題発見と解決を、共に。</title>
-<meta name="description" content="ZAXEL合同会社は、経営コンサルティング（業務システム改善・開発体制の立て直し・経営アドバイザリー）と、車の管理アプリ「TrustCar」をはじめとするアプリ開発で、クライアントの持続的成長を支援します。">
+<title>ZAXEL合同会社｜経営コンサルティングとアプリ開発</title>
+<meta name="description" content="ZAXEL合同会社は、東京と岡山で経営コンサルティングとアプリ開発をしています。社内システムの改善、開発の進め方の見直し、経営の相談、車の管理アプリ TrustCar、社内FAQツール Inquira。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
 <style>
@@ -745,6 +745,27 @@
   .deck-card small { display: block; font-family: 'DM Mono', monospace; font-size: 12px; color: var(--gold); letter-spacing: .15em; }
   .deck-more { display: inline-block; font-size: 16px; color: var(--navy); text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: 2px; }
 
+
+  /* ─── アプリ紹介 ─── */
+  .app-block { margin-bottom: 72px; }
+  .app-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; margin-bottom: 32px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
+  .app-name { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 600; color: var(--navy); line-height: 1.1; }
+  .app-catch { font-size: 19px; font-weight: 500; color: var(--navy); margin-top: 6px; }
+  .app-head-right { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .app-head-right .tc-status { margin-bottom: 0; }
+  .feat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+  .inq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .feat { margin: 0; }
+  .feat-img {
+    border-radius: 14px; overflow: hidden; background: #fff;
+    border: 1px solid var(--border); box-shadow: 0 14px 34px rgba(14,28,47,0.12);
+    margin-bottom: 16px; height: 300px;
+  }
+  .feat.wide .feat-img { height: 340px; }
+  .feat-img img { width: 100%; height: auto; display: block; }
+  .feat figcaption { font-size: 15px; color: var(--text-sub); line-height: 1.75; }
+  .feat figcaption b { display: block; font-size: 18px; color: var(--navy); margin-bottom: 2px; }
+
   /* ─── PORTFOLIO ─── */
   .portfolio-wrap { max-width: 1100px; margin: 0 auto; }
   .deck-grid {
@@ -965,6 +986,7 @@
     .flow4 { display: grid; grid-template-columns: 1fr 1fr; } .flow4-arrow { display: none; } .flow4-step { padding: 18px 10px; }
     .phone { max-width: 220px; }
     .theme3, .phones, .deck-cards { grid-template-columns: 1fr; }
+    .feat-grid { grid-template-columns: 1fr 1fr; gap: 16px; } .inq-grid { grid-template-columns: 1fr; } .feat-img { height: 220px; } .feat.wide .feat-img { height: auto; max-height: 340px; } .app-name { font-size: 38px; }
     .ba { grid-template-columns: 1fr; } .ba-arrow { transform: rotate(90deg); text-align: center; }
     .tc-map { grid-template-columns: 1fr; } .tc-link { transform: rotate(90deg); } .tc-sub { grid-column: auto; }
     .track-intro { grid-template-columns: 1fr; gap: 32px; }
@@ -986,7 +1008,7 @@
   </a>
   <ul class="nav-links">
     <li><a href="#consulting">経営コンサル</a></li>
-    <li><a href="#trustcar">TrustCar</a></li>
+    <li><a href="#apps">アプリ</a></li>
     <li><a href="#track">実績</a></li>
     <li><a href="#services">支援領域</a></li>
     <li><a href="#portfolio">公開資料</a></li>
@@ -1009,13 +1031,13 @@
   </div>
   <div class="hero-content">
     <div class="hero-tag">ZAXEL合同会社</div>
-    <h1>本質的な<em>問題発見</em>と、<br>確実な<em>解決</em>を共に。</h1>
+    <h1>会社の困りごとを、<br><em>仕組み</em>と<em>アプリ</em>で。</h1>
     <p class="hero-sub">
-      経営コンサルティングと、アプリ開発。<br>考える力と作る力で、伴走します。
+      東京と岡山で、経営コンサルティングとアプリ開発をしています。<br>相談だけでも大丈夫です。
     </p>
     <div class="hero-actions">
       <a href="#contact" class="btn-primary">相談する</a>
-      <a href="#consulting" class="btn-secondary">事業を見る</a>
+      <a href="#consulting" class="btn-secondary">何ができるか見る</a>
     </div>
     <div class="hero-stats">
       <div class="stat-item">
@@ -1038,14 +1060,14 @@
 <section id="track" class="track-section">
   <div class="track-wrap">
     <div class="section-tag">Track Record</div>
-    <h2>大手・ベンチャー・公共。<br>業界を横断する実績。</h2>
+    <h2>これまでの仕事</h2>
 
     <div class="track-intro">
       <div class="track-statement">
-        症状ではなく、<br>原因から解く。
+        目の前の不具合より先に、<br>なぜそうなったかを探します。
       </div>
       <div class="track-note">
-        東京・岡山を拠点に、IT・公共・スタートアップで実績。現場から経営まで支援します。
+        大手IT企業、公共、スタートアップで、PMや業務改善をしてきました。
       </div>
     </div>
 
@@ -1054,7 +1076,7 @@
       <div class="client-card">
         <div class="client-type">Large Enterprise</div>
         <h3>大手IT企業<br>プロダクト開発PM</h3>
-        <p>100名超の開発組織で、進め方と管理を標準化。</p>
+        <p>100名を超える開発組織で、進め方と管理のしかたをそろえました。</p>
         <div class="client-result">
           <span class="client-result-num">15</span>
           <span class="client-result-unit">%</span>
@@ -1066,7 +1088,7 @@
       <div class="client-card">
         <div class="client-type">Public / Infrastructure</div>
         <h3>公共・インフラ領域<br>業務改革・BPR推進</h3>
-        <p>複雑な業務を整理し、担当者に頼らない形に。</p>
+        <p>込み入った業務を整理して、担当が替わっても回る形にしました。</p>
         <div class="client-result">
           <span class="client-result-num">40</span>
           <span class="client-result-unit">%</span>
@@ -1078,7 +1100,7 @@
       <div class="client-card">
         <div class="client-type">Venture / Startup</div>
         <h3>スタートアップ<br>組織設計・育成支援</h3>
-        <p>評価制度と行動指針を整え、早く戦力に。</p>
+        <p>評価のしかたと行動指針を整えて、新しい人が早く慣れるようにしました。</p>
         <div class="client-result">
           <span class="client-result-num">80</span>
           <span class="client-result-unit">%</span>
@@ -1089,8 +1111,8 @@
       <!-- PM改善 -->
       <div class="client-card">
         <div class="client-type">Development Reform</div>
-        <h3>開発組織<br>手戻りゼロ体制構築</h3>
-        <p>優先順位の決め方を整え、手戻りを削減。</p>
+        <h3>開発組織<br>やり直しを減らす体制づくり</h3>
+        <p>何を先にやるかの決め方をそろえて、やり直しを減らしました。</p>
         <div class="client-result">
           <span class="client-result-num">20</span>
           <span class="client-result-unit">%</span>
@@ -1101,8 +1123,8 @@
       <!-- AI開発 -->
       <div class="client-card">
         <div class="client-type">AI Native Development</div>
-        <h3>AI活用<br>MVP高速開発</h3>
-        <p>AIを使った開発で、早く・安く形に。</p>
+        <h3>AI活用<br>試作品を早く作る</h3>
+        <p>AIを使って、少ない人数と短い期間で作りました。</p>
         <div class="client-result">
           <span class="client-result-num">60</span>
           <span class="client-result-unit">%</span>
@@ -1113,8 +1135,8 @@
       <!-- 経営 -->
       <div class="client-card">
         <div class="client-type">Management Advisory</div>
-        <h3>経営者目線の<br>アドバイザリー支援</h3>
-        <p>経営者の立場から、実行できる助言を。</p>
+        <h3>経営の相談<br>（顧問）</h3>
+        <p>予算と実績の見方や、資金繰りの相談に乗っています。</p>
         <div class="client-result">
           <span class="client-result-num">3</span>
           <span class="client-result-unit">社</span>
@@ -1130,42 +1152,42 @@
   <div class="pillar-wrap">
     <div class="section-tag">Management Consulting</div>
     <h2>経営コンサルティング</h2>
-    <p class="section-desc">現場の困りごとを伺い、使いながら直していきます。</p>
+    <p class="section-desc">社内システムや仕事の進め方で困っていることを聞いて、使いながら直していきます。</p>
 
     <div class="flow4">
       <div class="flow4-step">
         <svg viewBox="0 0 48 48" class="ico"><path d="M8 12h32v20H20l-8 6v-6H8z"/></svg>
-        <b>聞く</b><span>使う人の声から</span>
+        <b>聞く</b><span>使っている人に話を聞く</span>
       </div>
       <div class="flow4-arrow">→</div>
       <div class="flow4-step">
         <svg viewBox="0 0 48 48" class="ico"><path d="M30 8l10 10-20 20H10V28z"/><path d="M26 12l10 10"/></svg>
-        <b>直す</b><span>今の使い方は崩さず</span>
+        <b>直す</b><span>今の使い方は変えない</span>
       </div>
       <div class="flow4-arrow">→</div>
       <div class="flow4-step">
         <svg viewBox="0 0 48 48" class="ico"><circle cx="24" cy="24" r="16"/><path d="M16 24l6 6 11-12"/></svg>
-        <b>確かめる</b><span>自動で毎回チェック</span>
+        <b>確かめる</b><span>直すたびに自動で確認</span>
       </div>
       <div class="flow4-arrow">→</div>
       <div class="flow4-step">
         <svg viewBox="0 0 48 48" class="ico"><path d="M12 6h18l8 8v28H12z"/><path d="M30 6v8h8M18 24h14M18 31h14"/></svg>
-        <b>渡す</b><span>手順書とマニュアル</span>
+        <b>渡す</b><span>手順書とマニュアルを残す</span>
       </div>
     </div>
 
     <div class="theme3">
       <div><b>業務システムの改善</b><span>毎日使う社内システムを使いやすく</span></div>
-      <div><b>開発体制・品質の立て直し</b><span>直すたびに壊れる、をなくす</span></div>
-      <div><b>経営アドバイザリー</b><span>予実・資金繰り・目標づくり</span></div>
+      <div><b>開発体制・品質の立て直し</b><span>直すたびに別の所が壊れる、をなくす</span></div>
+      <div><b>経営アドバイザリー</b><span>予算と実績、資金繰り、目標の立て方</span></div>
     </div>
 
     <div class="case-box">
       <div class="case-head">
         <div class="case-label">— Case Study</div>
-        <div class="case-client">IT企業（社名非公開）／継続支援中</div>
+        <div class="case-client">IT企業（社名は伏せています）／いまも続けています</div>
       </div>
-      <h3>社内の工数管理システムを、使いやすく直した事例</h3>
+      <h3>作業時間を記録する社内システムを、使いやすく直しました</h3>
       <div class="ba">
         <div class="ba-col">
           <div class="ba-tag">Before</div>
@@ -1189,50 +1211,71 @@
   </div>
 </section>
 
-<!-- アプリ開発 / TrustCar -->
-<section id="trustcar" class="pillar-section alt">
+<!-- アプリ開発 -->
+<section id="apps" class="pillar-section alt">
   <div class="pillar-wrap">
-    <div class="section-tag">App Development — Our Product</div>
+    <div class="section-tag">App Development</div>
     <h2>アプリ開発</h2>
-    <div class="tc-head">
-      <div>
-        <div class="tc-name">TrustCar</div>
-        <div class="tc-catch">クルマのことを、楽に・安心に・楽しく。</div>
+    <p class="section-desc">自分たちのアプリを2つ作って、実際に使ってもらっています。</p>
+
+    <div class="app-block" id="trustcar">
+      <div class="app-head">
+        <div>
+          <div class="app-name">TrustCar</div>
+          <div class="app-catch">車の記録と、整備工場とのやりとりを、ひとつのアプリで。</div>
+        </div>
+        <div class="app-head-right">
+          <div class="tc-status">整備工場1社とそのお客さまに試してもらっています</div>
+          <a href="#contact" class="btn-primary">話を聞いてみる</a>
+        </div>
       </div>
-      <div class="tc-head-right">
-        <div class="tc-status">整備工場とそのお客さまで試験提供中</div>
-        <a href="#contact" class="btn-primary">導入を相談する</a>
+      <div class="feat-grid">
+        <figure class="feat">
+          <div class="feat-img"><img src="img/trustcar/f_year.png" alt="この1年のふりかえり画面" loading="lazy"></div>
+          <figcaption><b>1年のふりかえり</b>かかった費用を、同じ車種に乗っている人と比べられます。</figcaption>
+        </figure>
+        <figure class="feat">
+          <div class="feat-img"><img src="img/trustcar/f_fuel.png" alt="給油の記録画面" loading="lazy"></div>
+          <figcaption><b>燃費が出る</b>給油を入れるだけで、燃費と1kmあたりの費用がわかります。</figcaption>
+        </figure>
+        <figure class="feat">
+          <div class="feat-img"><img src="img/trustcar/f_cost.png" alt="維持費レポート画面" loading="lazy"></div>
+          <figcaption><b>維持費の目安</b>同じ車の持ち主の記録から、1年でいくらかかるかがわかります。</figcaption>
+        </figure>
+        <figure class="feat">
+          <div class="feat-img"><img src="img/trustcar/f_share.png" alt="お店に共有した車の画面" loading="lazy"></div>
+          <figcaption><b>お店に見せる</b>整備の履歴をお店と共有して、そのまま見積もりを頼めます。</figcaption>
+        </figure>
       </div>
+      <p class="phones-note">画面はテスト用のデータです。</p>
     </div>
 
-    <div class="phones">
-      <figure>
-        <div class="phone"><img src="img/trustcar/vehicle.png" alt="愛車の記録画面" loading="lazy"></div>
-        <figcaption><b>愛車の記録</b>整備・車検・保険をひとつに</figcaption>
-      </figure>
-      <figure>
-        <div class="phone"><img src="img/trustcar/report.png" alt="維持費レポート画面" loading="lazy"></div>
-        <figcaption><b>維持費が分かる</b>同じ車の人の実例と比べられる</figcaption>
-      </figure>
-      <figure>
-        <div class="phone"><img src="img/trustcar/ledger.png" alt="お店の顧客台帳画面" loading="lazy"></div>
-        <figcaption><b>お店の顧客台帳</b>車検が近い順にひと目で</figcaption>
-      </figure>
-    </div>
-    <p class="phones-note">画面はサンプルデータです。</p>
-
-    <div class="tc-map">
-      <div class="tc-node"><b>クルマを持つ方</b><span>記録・お知らせ</span></div>
-      <div class="tc-link">⇄</div>
-      <div class="tc-node tc-core"><b>TrustCar</b><span>同じ履歴を共有</span></div>
-      <div class="tc-link">⇄</div>
-      <div class="tc-node"><b>整備工場・販売店</b><span>顧客台帳・相談</span></div>
-      <div class="tc-node tc-sub"><b>社用車を管理する法人</b><span>車検・点検の予定をまとめて</span></div>
+    <div class="app-block" id="inquira">
+      <div class="app-head">
+        <div>
+          <div class="app-name">Inquira</div>
+          <div class="app-catch">社内の資料をもとに、AIが社員の質問に答えるFAQツール。</div>
+        </div>
+        <div class="app-head-right">
+          <a href="#contact" class="btn-primary">話を聞いてみる</a>
+        </div>
+      </div>
+      <div class="inq-grid">
+        <figure class="feat wide">
+          <div class="feat-img"><img src="img/inquira/chat.png" alt="質問画面" loading="lazy"></div>
+          <figcaption><b>聞けば、資料から答える</b>マニュアルや規程を取り込んでおくと、どの資料に書いてあるかも添えて答えます。</figcaption>
+        </figure>
+        <figure class="feat wide">
+          <div class="feat-img"><img src="img/inquira/pii.png" alt="取り込み前の個人情報チェック画面" loading="lazy"></div>
+          <figcaption><b>個人情報は取り込む前に止める</b>マイナンバーやメールアドレスが入った資料は、取り込む前に見つけて知らせます。</figcaption>
+        </figure>
+      </div>
+      <p class="phones-note">画面は架空の会社のデータです。データはお客さまのサーバーに置けます。</p>
     </div>
 
     <div class="tc-dev">
-      <h3>受託開発も承ります</h3>
-      <p>業務アプリ・社内システムを、AI開発で小さく早く作ります。</p>
+      <h3>受託開発もしています</h3>
+      <p>社内で使うアプリや業務システムを、まず小さく作って、使いながら直していきます。</p>
     </div>
   </div>
 </section>
@@ -1241,14 +1284,14 @@
 <section id="services" class="services-section">
   <div class="services-wrap">
     <div class="section-tag">Services</div>
-    <h2>支援領域</h2>
-    <p class="section-desc">課題の発見から、成果が出るまで。</p>
+    <h2>ほかにできること</h2>
+    <p class="section-desc">これまでやってきたことです。組み合わせてもお受けします。</p>
     <div class="services-grid">
       <div class="service-card">
         <div class="service-num">01</div>
         <h3>経営課題・解決策提案</h3>
         <div class="service-en">Strategy Consulting</div>
-        <p>今とありたい姿の差から、打ち手を決めます。</p>
+        <p>今どうなっているかを整理して、何から手を付けるか決めます。</p>
         <div class="service-tags">
           <span class="tag">As-Is / To-Be</span>
           <span class="tag">課題構造化</span>
@@ -1259,7 +1302,7 @@
         <div class="service-num">02</div>
         <h3>プロジェクトマネジメント</h3>
         <div class="service-en">Project Management</div>
-        <p>計画・管理を整え、手戻りなく進めます。</p>
+        <p>計画と進み具合の見方をそろえて、やり直しを減らします。</p>
         <div class="service-tags">
           <span class="tag">WBS</span>
           <span class="tag">リスク管理</span>
@@ -1270,7 +1313,7 @@
         <div class="service-num">03</div>
         <h3>組織設計</h3>
         <div class="service-en">Organization Design</div>
-        <p>理念・行動指針・評価制度をつなげます。</p>
+        <p>行動指針と評価のしかたを、ちぐはぐにならないようそろえます。</p>
         <div class="service-tags">
           <span class="tag">評価制度</span>
           <span class="tag">行動指針</span>
@@ -1281,7 +1324,7 @@
         <div class="service-num">04</div>
         <h3>新人育成</h3>
         <div class="service-en">Talent Development</div>
-        <p>成果の出る型を、研修とOJTで身につけます。</p>
+        <p>新人向けの研修と、現場で教えるときの段取りを作ります。</p>
         <div class="service-tags">
           <span class="tag">研修設計</span>
           <span class="tag">OJT支援</span>
@@ -1292,7 +1335,7 @@
         <div class="service-num">05</div>
         <h3>BPR（業務改善）</h3>
         <div class="service-en">Business Process Reengineering</div>
-        <p>業務を標準化し、人に頼らない仕組みに。</p>
+        <p>その人しか分からない仕事を、誰でもできる手順にします。</p>
         <div class="service-tags">
           <span class="tag">業務標準化</span>
           <span class="tag">フロー設計</span>
@@ -1303,7 +1346,7 @@
         <div class="service-num">06</div>
         <h3>アプリ開発</h3>
         <div class="service-en">App Development</div>
-        <p>必要な機能から、小さく早く作ります。</p>
+        <p>いちばん必要な機能から作って、早く使い始めます。</p>
         <div class="service-tags">
           <span class="tag">Claude Code</span>
           <span class="tag">MVP</span>
@@ -1316,8 +1359,8 @@
     <div class="advisory-banner">
       <div>
         <div class="advisory-tag">— Management Advisory</div>
-        <h3>経営者目線のアドバイザリー</h3>
-        <p>自らも経営する立場で、一緒に経営を考えます。</p>
+        <h3>経営の相談</h3>
+        <p>自分も会社を経営しているので、同じ目線で相談に乗れます。</p>
       </div>
       <div class="advisory-items">
         <div class="advisory-item">予実管理・バジェットコントロール</div>
@@ -1334,8 +1377,8 @@
 <section id="portfolio">
   <div class="portfolio-wrap">
     <div class="section-tag">Works & Knowledge</div>
-    <h2>公開資料・実績</h2>
-    <p class="section-desc">PM・AI開発・会議の進め方などの資料を公開しています。</p>
+    <h2>公開している資料</h2>
+    <p class="section-desc">仕事で使ってきた資料を Speaker Deck に置いています。</p>
     <div class="deck-cards">
       <a href="https://speakerdeck.com/zashii/chu-xin-zhe-xiang-ke-claude-codedehe-gadekirunoka" target="_blank" rel="noopener" class="deck-card">
         <img src="img/decks/chu-xin-zhe-xiang-ke-claude-codedehe-gadekirunoka.jpg" alt="【初心者向け】Claude Codeで何ができるのか" loading="lazy">
@@ -1369,10 +1412,10 @@
       <div class="section-tag">About</div>
       <h2>ZAXEL合同会社</h2>
       <blockquote class="about-quote">
-        症状ではなく、原因から解く。
+        まず、なぜそうなったかを探す。
       </blockquote>
       <p class="about-text">
-        東京・岡山を拠点に、PM・業務改善・AI開発で支援しています。<b>自身も経営者</b>として、現場から経営判断まで一緒に考えます。
+        東京と岡山を拠点に、PM、業務改善、アプリ開発をしています。<b>自分も経営者</b>なので、現場の話もお金の話も一緒にできます。
       </p>
     </div>
     <div>
@@ -1432,7 +1475,7 @@
       <div class="section-tag" style="justify-content: center;">Contact</div>
       <h2>まずは、相談から。</h2>
       <p class="contact-sub">
-        経営・システム・アプリ・TrustCar、何でもどうぞ。
+        経営のこと、社内システムのこと、アプリのこと。まとまっていなくても大丈夫です。
       </p>
     </div>
 
@@ -1442,8 +1485,8 @@
         <div>
           <div class="contact-info-tag">— ZAXEL LLC</div>
         </div>
-        <h3>経営の悩みを、<br>一緒に解決しましょう。</h3>
-        <p>右のフォームからご連絡ください。</p>
+        <h3>お問い合わせ</h3>
+        <p>フォームから送ってください。3営業日以内にお返事します。</p>
         <div class="contact-info-links">
           <a href="https://zashii.hatenablog.com/" target="_blank" class="contact-info-link">ブログ / Hatenablog</a>
           <a href="https://speakerdeck.com/zashii" target="_blank" class="contact-info-link">Speaker Deck — 公開資料</a>
