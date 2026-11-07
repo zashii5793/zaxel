@@ -106,9 +106,9 @@
 
   /* ─── HERO ─── */
   .hero {
-    min-height: 100vh;
+    min-height: auto;
     display: flex; align-items: center;
-    padding: 140px 64px 100px;
+    padding: 120px 64px 64px;
     background: var(--off-white);
     position: relative;
     overflow: hidden;
@@ -294,7 +294,7 @@
   }
 
   /* ─── SECTION COMMON ─── */
-  section { padding: 104px 64px; }
+  section { padding: 64px 64px; }
   .section-tag {
     font-family: 'DM Mono', monospace;
     font-size: 12px;
@@ -322,8 +322,8 @@
     font-weight: 400;
     line-height: 1.9;
     color: var(--text-mid);
-    max-width: 560px;
-    margin-bottom: 56px;
+    max-width: 720px;
+    margin-bottom: 28px;
   }
 
   /* ─── CLIENT TRACK RECORD（差別化） ─── */
@@ -333,8 +333,8 @@
   .track-intro {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    margin-bottom: 64px;
+    gap: 48px;
+    margin-bottom: 32px;
     align-items: start;
   }
   .track-statement {
@@ -360,10 +360,10 @@
     grid-template-columns: repeat(3, 1fr);
     border-top: 1px solid var(--border);
     border-left: 1px solid var(--border);
-    margin-bottom: 64px;
+    margin-bottom: 0;
   }
   .client-card {
-    padding: 36px 32px;
+    padding: 28px 28px;
     border-right: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
     background: var(--white);
@@ -555,7 +555,7 @@
 
   /* ADVISORY 特設 */
   .advisory-banner {
-    margin-top: 56px;
+    margin-top: 32px;
     background: var(--navy);
     padding: 48px 52px;
     display: grid;
@@ -614,7 +614,7 @@
   .pillar-wrap { max-width: 1100px; margin: 0 auto; }
   .pillar-themes {
     display: grid; grid-template-columns: repeat(3, 1fr);
-    border: 1px solid var(--border); margin-bottom: 56px;
+    border: 1px solid var(--border); margin-bottom: 28px;
   }
   .pillar-theme { padding: 36px 32px; border-right: 1px solid var(--border); background: var(--white); }
   .pillar-theme:last-child { border-right: none; }
@@ -680,7 +680,7 @@
   .tc-for-item h3 { font-size: 19px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
   .tc-for-item p { font-size: 16.5px; font-weight: 400; line-height: 1.95; color: var(--text-mid); }
   .tc-dev {
-    margin-top: 56px; padding-top: 36px; border-top: 1px solid var(--border);
+    margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border);
     display: grid; grid-template-columns: auto 1fr; gap: 32px; align-items: start;
   }
   .tc-dev h3 { font-size: 20px; font-weight: 700; color: var(--navy); white-space: nowrap; }
@@ -689,7 +689,7 @@
 
   /* ─── 図・画面（2本柱） ─── */
   .ico { width: 44px; height: 44px; fill: none; stroke: var(--navy); stroke-width: 2.2; stroke-linejoin: round; stroke-linecap: round; }
-  .flow4 { display: flex; align-items: stretch; gap: 12px; margin-bottom: 40px; }
+  .flow4 { display: flex; align-items: stretch; gap: 12px; margin-bottom: 20px; }
   .flow4-step {
     flex: 1; background: var(--white); border: 1px solid var(--border);
     padding: 28px 16px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 10px;
@@ -697,7 +697,7 @@
   .flow4-step b { font-size: 22px; color: var(--navy); }
   .flow4-step span { font-size: 15px; color: var(--text-sub); }
   .flow4-arrow { align-self: center; font-size: 26px; color: var(--gold); }
-  .theme3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 40px; }
+  .theme3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 20px; }
   .theme3 div { border-left: 4px solid var(--gold); background: var(--cream); padding: 18px 22px; }
   .theme3 b { display: block; font-size: 18px; color: var(--navy); margin-bottom: 4px; }
   .theme3 span { font-size: 15px; color: var(--text-sub); }
@@ -747,8 +747,8 @@
 
 
   /* ─── アプリ紹介 ─── */
-  .app-block { margin-bottom: 72px; }
-  .app-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; margin-bottom: 32px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
+  .app-block { margin-bottom: 40px; }
+  .app-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; margin-bottom: 20px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
   .app-name { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 600; color: var(--navy); line-height: 1.1; }
   .app-catch { font-size: 19px; font-weight: 500; color: var(--navy); margin-top: 6px; }
   .app-head-right { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
@@ -769,14 +769,24 @@
 
   /* ─── AI活用・開発フロー ─── */
   .ai-label { font-size: 13px; font-weight: 700; color: var(--gold); letter-spacing: .08em; margin-bottom: 6px; }
-  .ai-main { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: center; margin-bottom: 40px; }
+  .ai-main { margin-bottom: 20px; }
   .ai-main h3, .ai-card h3, .devflow h3 { font-size: 21px; font-weight: 700; color: var(--navy); line-height: 1.6; margin-bottom: 10px; }
   .ai-main p, .ai-card p, .devflow p { font-size: 16px; color: var(--text-mid); line-height: 1.85; }
   .ai-main .feat-img, .devflow-img { height: auto; margin-bottom: 0; }
+  .office-flow { display: flex; align-items: stretch; gap: 8px; margin: 16px 0 12px; }
+  .of-step { flex: 1; border: 1px solid var(--border-strong); background: var(--white); padding: 14px 12px; text-align: center; }
+  .of-step b { display: block; font-size: 18px; color: var(--navy); margin-bottom: 4px; }
+  .of-step span { font-size: 14px; color: var(--text-sub); line-height: 1.6; display: block; }
+  .of-last { background: var(--navy); border-color: var(--navy); }
+  .of-last b, .of-last span { color: var(--white); }
+  .of-arrow { align-self: center; color: var(--gold); font-size: 22px; }
+  .office-roles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+  .office-roles div { background: var(--cream); padding: 10px 14px; font-size: 14px; color: var(--text-mid); }
+  .office-roles b { display: block; font-size: 15px; color: var(--navy); }
   .ai-note { font-size: 13px !important; color: var(--text-light) !important; margin-top: 8px; }
   .ai-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
   .ai-card { background: var(--cream); border-top: 3px solid var(--gold); padding: 24px 24px 26px; }
-  .devflow { margin-top: 56px; display: grid; grid-template-columns: 1fr 1.6fr; gap: 40px; align-items: center; }
+  .devflow { margin-top: 32px; display: grid; grid-template-columns: 1fr 1.6fr; gap: 40px; align-items: center; }
   .devflow-img { display: block; }
 
   /* ─── PORTFOLIO ─── */
@@ -862,12 +872,12 @@
   /* ─── CONTACT ─── */
   .contact-section {
     background: var(--white);
-    padding: 104px 64px;
+    padding: 64px 64px;
   }
   .contact-wrap { max-width: 1100px; margin: 0 auto; }
   .contact-header {
     text-align: center;
-    margin-bottom: 64px;
+    margin-bottom: 32px;
   }
   .contact-sub {
     font-size: 21px;
@@ -979,8 +989,8 @@
   @media (max-width: 900px) {
     nav { padding: 0 24px; }
     .nav-links { display: none; }
-    section, .contact-section { padding: 80px 28px; }
-    .hero { padding: 110px 28px 80px; }
+    section, .contact-section { padding: 48px 20px; }
+    .hero { padding: 100px 20px 48px; }
     .hero-deco { display: none; }
     h1 { font-size: 36px; }
     .hero-stats { flex-direction: column; }
@@ -999,7 +1009,7 @@
     .flow4 { display: grid; grid-template-columns: 1fr 1fr; } .flow4-arrow { display: none; } .flow4-step { padding: 18px 10px; }
     .phone { max-width: 220px; }
     .theme3, .phones, .deck-cards { grid-template-columns: 1fr; }
-    .ai-main, .ai-cards, .devflow { grid-template-columns: 1fr; } .feat-grid { grid-template-columns: 1fr 1fr; gap: 16px; } .inq-grid { grid-template-columns: 1fr; } .feat-img { height: 220px; } .feat.wide .feat-img { height: auto; max-height: 340px; } .app-name { font-size: 38px; }
+    .ai-cards, .devflow, .office-roles { grid-template-columns: 1fr; } .office-flow { flex-direction: column; } .of-arrow { transform: rotate(90deg); text-align: center; } .feat-grid { grid-template-columns: 1fr 1fr; gap: 16px; } .inq-grid { grid-template-columns: 1fr; } .feat-img { height: 220px; } .feat.wide .feat-img { height: auto; max-height: 340px; } .app-name { font-size: 38px; }
     .ba { grid-template-columns: 1fr; } .ba-arrow { transform: rotate(90deg); text-align: center; }
     .tc-map { grid-template-columns: 1fr; } .tc-link { transform: rotate(90deg); } .tc-sub { grid-column: auto; }
     .track-intro { grid-template-columns: 1fr; gap: 32px; }
@@ -1310,12 +1320,24 @@
     <p class="section-desc">お客さまに勧める前に、まず自分の会社で使っています。</p>
 
     <div class="ai-main">
-      <div class="feat-img ai-office"><img src="img/ai/office.png" alt="AI社員オフィスの画面" loading="lazy"></div>
-      <div>
-        <div class="ai-label">AI社員オフィス</div>
-        <h3>AIの社員に、会社の仕事を分担させる</h3>
-        <p>経営企画・PM・経理・開発などの役をAIに持たせています。社長がメモを書くと、担当が案件に分けて進め、成果物は承認を待ってから出します。</p>
-        <p class="ai-note">画面は例の会社のデータです。</p>
+      <div class="ai-label">AI社員オフィス</div>
+      <h3>社長がメモを書くと、AIの社員が仕事に分けて進める</h3>
+      <div class="office-flow">
+        <div class="of-step"><b>社長</b><span>やりたいことをメモに書く</span></div>
+        <div class="of-arrow">→</div>
+        <div class="of-step"><b>経営企画</b><span>狙いと、やらないことを決める</span></div>
+        <div class="of-arrow">→</div>
+        <div class="of-step"><b>PM</b><span>案件と期限に分けて担当に渡す</span></div>
+        <div class="of-arrow">→</div>
+        <div class="of-step"><b>各担当</b><span>下書き・資料・プログラムを作る</span></div>
+        <div class="of-arrow">→</div>
+        <div class="of-step of-last"><b>社長</b><span>見て承認したものだけ外に出す</span></div>
+      </div>
+      <div class="office-roles">
+        <div><b>経理</b>請求書の下書き、毎月の数字</div>
+        <div><b>開発</b>アプリの改修、テスト</div>
+        <div><b>マーケ</b>ブログや投稿の下書き</div>
+        <div><b>デザイン</b>資料やページの見た目</div>
       </div>
     </div>
 
