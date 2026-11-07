@@ -766,6 +766,19 @@
   .feat figcaption { font-size: 15px; color: var(--text-sub); line-height: 1.75; }
   .feat figcaption b { display: block; font-size: 18px; color: var(--navy); margin-bottom: 2px; }
 
+
+  /* ─── AI活用・開発フロー ─── */
+  .ai-label { font-size: 13px; font-weight: 700; color: var(--gold); letter-spacing: .08em; margin-bottom: 6px; }
+  .ai-main { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: center; margin-bottom: 40px; }
+  .ai-main h3, .ai-card h3, .devflow h3 { font-size: 21px; font-weight: 700; color: var(--navy); line-height: 1.6; margin-bottom: 10px; }
+  .ai-main p, .ai-card p, .devflow p { font-size: 16px; color: var(--text-mid); line-height: 1.85; }
+  .ai-main .feat-img, .devflow-img { height: auto; margin-bottom: 0; }
+  .ai-note { font-size: 13px !important; color: var(--text-light) !important; margin-top: 8px; }
+  .ai-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .ai-card { background: var(--cream); border-top: 3px solid var(--gold); padding: 24px 24px 26px; }
+  .devflow { margin-top: 56px; display: grid; grid-template-columns: 1fr 1.6fr; gap: 40px; align-items: center; }
+  .devflow-img { display: block; }
+
   /* ─── PORTFOLIO ─── */
   .portfolio-wrap { max-width: 1100px; margin: 0 auto; }
   .deck-grid {
@@ -986,7 +999,7 @@
     .flow4 { display: grid; grid-template-columns: 1fr 1fr; } .flow4-arrow { display: none; } .flow4-step { padding: 18px 10px; }
     .phone { max-width: 220px; }
     .theme3, .phones, .deck-cards { grid-template-columns: 1fr; }
-    .feat-grid { grid-template-columns: 1fr 1fr; gap: 16px; } .inq-grid { grid-template-columns: 1fr; } .feat-img { height: 220px; } .feat.wide .feat-img { height: auto; max-height: 340px; } .app-name { font-size: 38px; }
+    .ai-main, .ai-cards, .devflow { grid-template-columns: 1fr; } .feat-grid { grid-template-columns: 1fr 1fr; gap: 16px; } .inq-grid { grid-template-columns: 1fr; } .feat-img { height: 220px; } .feat.wide .feat-img { height: auto; max-height: 340px; } .app-name { font-size: 38px; }
     .ba { grid-template-columns: 1fr; } .ba-arrow { transform: rotate(90deg); text-align: center; }
     .tc-map { grid-template-columns: 1fr; } .tc-link { transform: rotate(90deg); } .tc-sub { grid-column: auto; }
     .track-intro { grid-template-columns: 1fr; gap: 32px; }
@@ -1009,6 +1022,7 @@
   <ul class="nav-links">
     <li><a href="#consulting">経営コンサル</a></li>
     <li><a href="#apps">アプリ</a></li>
+    <li><a href="#ai">AI活用</a></li>
     <li><a href="#track">実績</a></li>
     <li><a href="#services">支援領域</a></li>
     <li><a href="#portfolio">公開資料</a></li>
@@ -1208,6 +1222,14 @@
         </div>
       </div>
     </div>
+    <div class="devflow">
+      <div class="devflow-head">
+        <div class="ai-label">開発の進め方</div>
+        <h3>どの工程で何を作り、どのテストで確かめるか</h3>
+        <p>要件定義からリリースまでを1枚の図にしました。新しく入った人にも、お客さまにも、これを見せて進め方をそろえます。</p>
+      </div>
+      <a href="img/devflow.png" target="_blank" rel="noopener" class="feat-img devflow-img"><img src="img/devflow.png" alt="開発フローと成果物の図（V字モデル）" loading="lazy"></a>
+    </div>
   </div>
 </section>
 
@@ -1225,7 +1247,7 @@
           <div class="app-catch">車の記録と、整備工場とのやりとりを、ひとつのアプリで。</div>
         </div>
         <div class="app-head-right">
-          <div class="tc-status">整備工場1社とそのお客さまに試してもらっています</div>
+          <div class="tc-status">整備工場とそのお客さまに導入中</div>
           <a href="#contact" class="btn-primary">話を聞いてみる</a>
         </div>
       </div>
@@ -1276,6 +1298,43 @@
     <div class="tc-dev">
       <h3>受託開発もしています</h3>
       <p>社内で使うアプリや業務システムを、まず小さく作って、使いながら直していきます。</p>
+    </div>
+  </div>
+</section>
+
+<!-- AI活用 -->
+<section id="ai" class="pillar-section">
+  <div class="pillar-wrap">
+    <div class="section-tag">AI in Practice</div>
+    <h2>AIの使い方</h2>
+    <p class="section-desc">お客さまに勧める前に、まず自分の会社で使っています。</p>
+
+    <div class="ai-main">
+      <div class="feat-img ai-office"><img src="img/ai/office.png" alt="AI社員オフィスの画面" loading="lazy"></div>
+      <div>
+        <div class="ai-label">AI社員オフィス</div>
+        <h3>AIの社員に、会社の仕事を分担させる</h3>
+        <p>経営企画・PM・経理・開発などの役をAIに持たせています。社長がメモを書くと、担当が案件に分けて進め、成果物は承認を待ってから出します。</p>
+        <p class="ai-note">画面は例の会社のデータです。</p>
+      </div>
+    </div>
+
+    <div class="ai-cards">
+      <div class="ai-card">
+        <div class="ai-label">アプリ開発</div>
+        <h3>少ない人数でアプリを作る</h3>
+        <p>TrustCar と Inquira は、Claude Code を使って少人数で作りました。</p>
+      </div>
+      <div class="ai-card">
+        <div class="ai-label">社内システムの改修</div>
+        <h3>改修・確認・手順書までAIと進める</h3>
+        <p>受託の改修では、直す作業、自動の確認、反映の手順書づくりにAIを使っています。</p>
+      </div>
+      <div class="ai-card">
+        <div class="ai-label">毎日の段取り</div>
+        <h3>朝のToDoをメールで届ける</h3>
+        <p>予定とタスクをAIがまとめて、毎朝メールで届くようにしています。</p>
+      </div>
     </div>
   </div>
 </section>
