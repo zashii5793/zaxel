@@ -780,7 +780,10 @@
   .of-last { background: var(--navy); border-color: var(--navy); }
   .of-last b, .of-last span { color: var(--white); }
   .of-arrow { align-self: center; color: var(--gold); font-size: 22px; }
-  .office-roles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+  .office-top { display: grid; grid-template-columns: 1.15fr 1fr; gap: 36px; align-items: center; }
+  .office-img { height: auto; margin-bottom: 0; }
+  .office-top p { margin-bottom: 14px; }
+  .office-roles { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
   .office-roles div { background: var(--cream); padding: 10px 14px; font-size: 14px; color: var(--text-mid); }
   .office-roles b { display: block; font-size: 15px; color: var(--navy); }
   .ai-note { font-size: 13px !important; color: var(--text-light) !important; margin-top: 8px; }
@@ -1009,7 +1012,7 @@
     .flow4 { display: grid; grid-template-columns: 1fr 1fr; } .flow4-arrow { display: none; } .flow4-step { padding: 18px 10px; }
     .phone { max-width: 220px; }
     .theme3, .phones, .deck-cards { grid-template-columns: 1fr; }
-    .ai-cards, .devflow, .office-roles { grid-template-columns: 1fr; } .office-flow { flex-direction: column; } .of-arrow { transform: rotate(90deg); text-align: center; } .feat-grid { grid-template-columns: 1fr 1fr; gap: 16px; } .inq-grid { grid-template-columns: 1fr; } .feat-img { height: 220px; } .feat.wide .feat-img { height: auto; max-height: 340px; } .app-name { font-size: 38px; }
+    .ai-cards, .devflow, .office-top { grid-template-columns: 1fr; } .office-flow { flex-direction: column; } .of-arrow { transform: rotate(90deg); text-align: center; } .feat-grid { grid-template-columns: 1fr 1fr; gap: 16px; } .inq-grid { grid-template-columns: 1fr; } .feat-img { height: 220px; } .feat.wide .feat-img { height: auto; max-height: 340px; } .app-name { font-size: 38px; }
     .ba { grid-template-columns: 1fr; } .ba-arrow { transform: rotate(90deg); text-align: center; }
     .tc-map { grid-template-columns: 1fr; } .tc-link { transform: rotate(90deg); } .tc-sub { grid-column: auto; }
     .track-intro { grid-template-columns: 1fr; gap: 32px; }
@@ -1320,8 +1323,21 @@
     <p class="section-desc">お客さまに勧める前に、まず自分の会社で使っています。</p>
 
     <div class="ai-main">
-      <div class="ai-label">AI社員オフィス</div>
-      <h3>社長がメモを書くと、AIの社員が仕事に分けて進める</h3>
+      <div class="office-top">
+        <div class="feat-img office-img"><img src="img/ai/office.png" alt="AI社員オフィスの画面。社員がそれぞれの席で作業している" loading="lazy"></div>
+        <div>
+          <div class="ai-label">AI社員オフィス</div>
+          <h3>社長がメモを書くと、AIの社員が仕事に分けて進める</h3>
+          <p>役ごとにAIの社員がいて、席に着いている人が作業中です。誰が何をしているかは画面で見えます。</p>
+          <div class="office-roles">
+            <div><b>経理</b>請求書の下書き、毎月の数字</div>
+            <div><b>マーケ</b>ブログや投稿の下書き</div>
+            <div><b>デザイン</b>資料やページの見た目</div>
+            <div><b>法務</b>契約書の確認</div>
+          </div>
+          <p class="ai-note">画面は例の会社のデータです。</p>
+        </div>
+      </div>
       <div class="office-flow">
         <div class="of-step"><b>社長</b><span>やりたいことをメモに書く</span></div>
         <div class="of-arrow">→</div>
@@ -1332,12 +1348,6 @@
         <div class="of-step"><b>各担当</b><span>下書き・資料・プログラムを作る</span></div>
         <div class="of-arrow">→</div>
         <div class="of-step of-last"><b>社長</b><span>見て承認したものだけ外に出す</span></div>
-      </div>
-      <div class="office-roles">
-        <div><b>経理</b>請求書の下書き、毎月の数字</div>
-        <div><b>開発</b>アプリの改修、テスト</div>
-        <div><b>マーケ</b>ブログや投稿の下書き</div>
-        <div><b>デザイン</b>資料やページの見た目</div>
       </div>
     </div>
 
