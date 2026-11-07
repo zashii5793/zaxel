@@ -789,8 +789,12 @@
   .ai-note { font-size: 13px !important; color: var(--text-light) !important; margin-top: 8px; }
   .ai-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
   .ai-card { background: var(--cream); border-top: 3px solid var(--gold); padding: 24px 24px 26px; }
-  .devflow { margin-top: 32px; display: grid; grid-template-columns: 1fr 1.6fr; gap: 40px; align-items: center; }
+  .devflow { margin-top: 32px; display: grid; grid-template-columns: 1fr 1.25fr; gap: 40px; align-items: center; }
   .devflow-img { display: block; }
+  .devflow-points { list-style: none; counter-reset: dp; display: flex; flex-direction: column; gap: 12px; margin-top: 6px; }
+  .devflow-points li { counter-increment: dp; position: relative; padding-left: 34px; font-size: 15px; color: var(--text-mid); line-height: 1.7; }
+  .devflow-points li::before { content: counter(dp); position: absolute; left: 0; top: 2px; width: 24px; height: 24px; border-radius: 50%; background: var(--navy); color: #fff; font-size: 13px; display: grid; place-items: center; }
+  .devflow-points b { display: block; font-size: 16px; color: var(--navy); }
 
   /* ─── PORTFOLIO ─── */
   .portfolio-wrap { max-width: 1100px; margin: 0 auto; }
@@ -1212,8 +1216,13 @@
     <div class="devflow">
       <div class="devflow-head">
         <div class="ai-label">開発の進め方</div>
-        <h3>どの工程で何を作り、どのテストで確かめるか</h3>
-        <p>要件定義からリリースまでを1枚の図にしました。新しく入った人にも、お客さまにも、これを見せて進め方をそろえます。</p>
+        <h3>要件定義からリリースまでを、1枚の図にしています</h3>
+        <ol class="devflow-points">
+          <li><b>工程ごとに、作る書類を並べる</b>どの工程で何を作るかを、色を分けて同じ図に載せています。</li>
+          <li><b>作る工程と、確かめるテストを対にする</b>左で作ったものを、右のどのテストで確かめるかを点線でつないでいます。</li>
+          <li><b>その工程で決まることを書く</b>要件定義なら「何を作らないか」、テストなら「現場の使い方で動くか」。</li>
+          <li><b>AIへの頼み方も工程ごとに</b>例えば要件定義では「この機能を作らないほうがよい理由を5つ」と聞きます。</li>
+        </ol>
       </div>
       <a href="img/devflow.png" target="_blank" rel="noopener" class="feat-img devflow-img"><img src="img/devflow.png" alt="開発フローと成果物の図（V字モデル）" loading="lazy"></a>
     </div>
